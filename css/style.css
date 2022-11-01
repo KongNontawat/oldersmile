@@ -1,0 +1,61 @@
+/* Primary #A0CE76 */
+/* Primary Border #8ABE6A */
+/* Primary Text #59894F */
+
+body {
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 17px;
+}
+a,h1,h2,h3,h4,h5,h6,p {
+  color: #252525!important;
+  text-decoration: none!important;
+}
+img {
+  object-fit: cover!important;
+}
+.container {
+  max-width: 1000px!important;
+  padding: 0!important;
+  overflow-x: hidden;
+}
+.text-primary {
+  color: #59894F!important;
+}
+.btn-outline-primary:hover,
+.btn-primary{
+  background-color: #A0CE76!important;
+  border: 2px solid #8ABE6A!important;
+  color: #fff!important;
+}
+.bg-primary {
+  background-color: #A0CE76!important;
+  border: none;
+  color: #fff!important;
+}
+.btn-outline-primary {
+  border: 2px solid #8ABE6A!important;
+  color:#59894F ;
+  background-color: #fff;
+}
+.nav-pills,
+.nav-link {
+  border-radius: 0!important;
+}
+.form-control:focus,
+.form-select:focus,
+.btn-close:focus {
+  border: 1px solid #8ABE6A!important;
+  box-shadow: 0 0 0 0.25rem #a1ce7641!important;
+}
+.form-control,
+.form-select,
+.btn,
+.modal-content {
+  border-radius: 0.5rem!important;
+}
+.btn.rounded-pills {
+  border-radius: 50px!important;
+}
