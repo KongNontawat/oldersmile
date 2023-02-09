@@ -11,6 +11,7 @@ if(isset($_GET['search'])) {
 // สวัสดี
 // ว่าไง ลีโอ
 // test
+// บักควย
 $query = mysqli_query($conn,$sql);
 
 ?>
