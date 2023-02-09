@@ -51,30 +51,31 @@ $user_role = mysqli_query($conn,"SELECT *,COUNT(user_role) as count FROM user GR
             <div class="content-body">
 
                 <div class="container-fluid mt-3 pb-5">
-
-                    <div class="row mt-3 g-3 mb-3">
+                    <div class="row g-3 mb-3">
                         <div class="col-lg-7">
                             <div class="card shadow-sm mb-3">
                                 <div class="card-body">
+                                <h4 class="mb-2"><img src="../icon/chart2.png" width="40" height="40" alt="" class="me-2">แดชบอร์ด</h4>
+
                                     <div class="row">
                                         <div class="col-md-4">
                                             <div class="rounded-4 p-3 text-center" style="background:#FFE2E6;">
                                                 <img src="../icon/people.png" alt="" width="50" height="50">
-                                                <h4 class="my-2"><?php echo number_format(mysqli_num_rows($re1)) ?></h4>
+                                                <h2 class="my-2"><?php echo number_format(mysqli_num_rows($re1)) ?></h2>
                                                 <h6>ยอดผู้ใช้ทั้งหมด</h6>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="rounded-4 p-3 text-center" style="background:#FFF4DE;">
                                                 <img src="../icon/post.png" alt="" width="50" height="50">
-                                                <h4 class="my-2"><?php echo number_format(mysqli_num_rows($re2)) ?></h4>
+                                                <h2 class="my-2"><?php echo number_format(mysqli_num_rows($re2)) ?></h2>
                                                 <h6>จำนวนโพสต์ทั้งหมด</h6>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="rounded-4 p-3 text-center" style="background:#DCFCE7;">
                                                 <img src="../icon/category.png" alt="" width="50" height="50">
-                                                <h4 class="my-2"><?php echo number_format(mysqli_num_rows($re3)) ?></h4>
+                                                <h2 class="my-2"><?php echo number_format(mysqli_num_rows($re3)) ?></h2>
                                                 <h6>จำนวนหมวดหมู่</h6>
                                             </div>
                                         </div>
@@ -84,7 +85,8 @@ $user_role = mysqli_query($conn,"SELECT *,COUNT(user_role) as count FROM user GR
 
                             <div class="card shadow-sm">
                                 <div class="card-body">
-                                    <canvas id="myChart2" style="max-height:285px;"></canvas>
+                                    <h5 class="mb-3 text-center">หมวดหมู่ที่ผู้ใข้สนใจมากที่สุด</h5>
+                                    <canvas id="myChart2" style="max-height:195px;"></canvas>
                                 </div>
                             </div>
 
@@ -93,6 +95,7 @@ $user_role = mysqli_query($conn,"SELECT *,COUNT(user_role) as count FROM user GR
                         <div class="col-lg-5">
                             <div class="card shadow-sm">
                                 <div class="card-body">
+                                <h5 class="mb-3 text-center">สถานะผู้ใช้ในระบบ</h5>
                                 <canvas id="myChart" style="max-height:500px;"></canvas>
                                 </div>
                             </div>
@@ -193,12 +196,6 @@ $user_role = mysqli_query($conn,"SELECT *,COUNT(user_role) as count FROM user GR
                     beginAtZero: true
                     }
                 },
-            plugins: {
-                title: {
-                    display: true,
-                    text: 'ผู้ใช้ในระบบ',
-                }
-            }
             }
         });
     </script>
@@ -224,12 +221,6 @@ $user_role = mysqli_query($conn,"SELECT *,COUNT(user_role) as count FROM user GR
                     beginAtZero: true
                     }
                 },
-                plugins: {
-                    title: {
-                        display: true,
-                        text: 'หมวดหมู่ที่ผู้ใข้สนใจมากที่สุด',
-                    }
-                }
             }
         });
     </script>
