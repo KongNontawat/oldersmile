@@ -23,7 +23,7 @@
                 <?php endif; ?>
 
                 <?php if(isset($_SESSION['login']) AND $_SESSION['my_role'] == 'admin'): ?>
-                <a href="admin/dashboard.php" class="btn btn-outline-secondary d-none d-md-inline"><img src="icon/admin.png" alt=""> จัดการหลังบ้าน</a>
+                <a href="admin/dashboard.php" class="btn btn-outline-secondary d-none d-md-inline"><img src="icon/chart2.png" alt=""> จัดการหลังบ้าน</a>
                 <?php endif; ?>
             </li>
         </ul>

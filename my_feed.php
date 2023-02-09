@@ -60,6 +60,7 @@ $query_post = mysqli_query($conn, $sql);
             <!-- Content -->
             <div class="col-md-8 col-lg-6">
                 
+            <?php include('component/banner.php'); ?>
                 
 
                 <nav class="nav nav-pills nav-fill nav-justified mb-3 tab">
