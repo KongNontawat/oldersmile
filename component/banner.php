@@ -1,0 +1,1 @@
+<img src="img/banner.png" alt="" class="mb-2 mb-lg-3 w-100 rounded-4">
