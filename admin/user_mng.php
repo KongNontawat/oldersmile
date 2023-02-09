@@ -8,7 +8,7 @@ if(isset($_GET['search'])) {
     $search = $_GET['search'];
     $sql = "SELECT * FROM user WHERE user_name LIKE '%$search%'";
 }
-
+// สวัสดี
 $query = mysqli_query($conn,$sql);
 
 ?>
