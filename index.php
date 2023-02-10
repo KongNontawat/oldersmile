@@ -198,6 +198,7 @@ $query_post = mysqli_query($conn, $sql);
                                 </div>
                             <?php endforeach; ?>
                         </div>
+                        <a href="search.php" class="btn btn-light col-12 mt-3">ดูทั้งหมด</a>
                     </div>
                 </div>
                 <?php endif; ?>
