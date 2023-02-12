@@ -91,8 +91,8 @@ $query_post = mysqli_query($conn, $sql_post);
                       <img src="icon/verify.png" alt="" class="ms-1" width="15" height="15">
                       <?php endif; ?>
                     </a>
-                    <a href="user_profile.php?id=<?php echo $user['user_id'] ?>"
-                      class="btn btn-outline-primary btn-sm">ดูโปรไฟล์</a>
+                    <a href="user_proc/unfollow_proc.php?following=<?php echo $user['user_id'] ?>"
+                      class="btn btn-primary btn-sm">เลิกติดตาม</a>
                   </li>
                   <?php endforeach; ?>
                 </ul>

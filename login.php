@@ -13,7 +13,7 @@ include('conn.php');
     <link rel="stylesheet" href="css/style.css">
     <title>OlderSmile</title>
 </head>
-<body class="w-100 vh-100 d-flex justify-content-center align-items-center">
+<body class="w-100 vh-100 d-flex justify-content-center align-items-center px-2">
     <!-- Alert -->
 
     <main class="w-100" style="max-width:450px">

@@ -13,7 +13,7 @@ include('conn.php');
     <link rel="stylesheet" href="css/style.css">
     <title>OlderSmile</title>
 </head>
-<body class="w-100 vh-100 d-flex justify-content-center align-items-center">
+<body class="w-100 vh-100 d-flex justify-content-center align-items-center py-5 px-2">
     <!-- Alert -->
 
     <main class="w-100" style="max-width:650px">
@@ -68,7 +68,7 @@ include('conn.php');
                                         <input type="file" name="user_image" id="image" accept="image/*" class="form-control">
                                     </div>
 
-                                    <h4 class="my-3">ความสนใจของคุณ</h4>
+                                    <h4 class="mb-3 mt-4">ความสนใจของคุณ</h4>
                                     <?php 
                                     $query_my_cat_2 = mysqli_query($conn, "SELECT * FROM category WHERE NOT cat_id = 1");
                                     foreach($query_my_cat_2 as $my_cat2):

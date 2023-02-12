@@ -74,7 +74,15 @@ $query_post = mysqli_query($conn, $sql2);
                         <p class="mb-2">เพศ : <?php echo $row['user_gender'] ?></p>
                         <p class="mb-2">วันเกิด : <?php echo $row['user_dob'] ?></p>
                         <p class="mb-2">เบอร์โทร : <?php echo $row['user_tel'] ?></p>
-
+                        <?php
+                            $query_foll = mysqli_query($conn, "SELECT * FROM follow WHERE follower = '$my_id' AND following = '{$row['user_id']}'");
+                            if(mysqli_num_rows($query_foll) > 0):
+                        ?>
+                        <a href="user_proc/unfollow_proc.php?following=<?php echo $row['user_id'] ?>" class="btn btn-primary btn-sm mt-2">เลิกติดตาม</a>
+                        <?php else: ?>
+                        <a href="user_proc/follow_proc.php?following=<?php echo $row['user_id'] ?>" class="btn btn-outline-primary btn-sm mt-2">ติดตาม</a>
+                        <?php endif; ?>
+                        <a href="chat.php?id=<?php echo $row['user_id']; ?>" class="btn btn-outline-primary btn-sm ms-2 mt-2">พูดคุย</a>
                         <h5 class="mt-4 mb-2">ความสนใจของเขา</h5>
 
 
