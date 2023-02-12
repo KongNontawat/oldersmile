@@ -121,7 +121,7 @@ $user_role = mysqli_query($conn,"SELECT *,COUNT(user_role) as count FROM user GR
                                             <?php foreach($query as $i => $row):?>
                                             <tr>
                                                 <td><?php echo $i+1;?></td>
-                                                <td><img src="../img/<?php echo $row['post_media'];?>" alt="" width="100" height="60" class="rounded-4"></td>
+                                                <td><img src="../img/<?php echo ($row['post_media'] )?((end(explode('.',$row['post_media']))=='mp4')?'dummy.png':$row['post_media']):'dummy.png';?>" alt="" width="100" height="60" class="rounded-4"></td>
                                                 <td><p class="text-o-1"><?php echo $row['post_body'];?></p></td>
                                                 <td><?php echo $row['count'];?></td>
                                             </tr>
@@ -149,7 +149,7 @@ $user_role = mysqli_query($conn,"SELECT *,COUNT(user_role) as count FROM user GR
                                             <?php foreach($query2 as $i2 => $row2):?>
                                             <tr>
                                                 <td><?php echo $i2+1;?></td>
-                                                <td><img src="../img/<?php echo $row2['ad_image'];?>" alt="" width="100" height="60" class="rounded-4"></td>
+                                                <td><img src="../img/<?php echo ($row2['ad_image'])?$row2['ad_image']:'dummy.png';?>" alt="" width="100" height="60" class="rounded-4"></td>
                                                 <td><p class="text-o-1"><?php echo $row2['ad_body'];?></p></td>
                                                 <td><?php echo $row2['cat_name'];?></td>
                                                 <td><?php echo $row2['ad_point'];?></td>

@@ -1,7 +1,7 @@
 <?php
 session_start();
 date_default_timezone_set('Asia/Bangkok');
-// error_reporting(0);
+error_reporting(0);
 
 $host = 'localhost';
 $user = 'root';

@@ -53,5 +53,18 @@ ul.nav .nav-link,
     border-bottom-right-radius: 0.8rem!important;
 }
 
+.accordion-button,
+.accordion-header,
+.accordion-item {
+    border-radius: 0.8rem!important;
+}
 
+.accordion-body {
+    padding-left: 0!important;
+    padding-right: 0!important;
+}
+
+.accordion .list-group .list-group-item {
+    border: none!important;
+}
 

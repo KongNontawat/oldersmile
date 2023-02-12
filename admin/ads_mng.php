@@ -2,7 +2,7 @@
 include('../conn.php');
 include('auth_proc/check_login.php');
 
-$sql = "SELECT * FROM advert WHERE ad_status = 1";
+$sql = "SELECT * FROM advert AS a LEFT JOIN category AS c ON a.cat_id = c.cat_id WHERE ad_status = 1";
 $query = mysqli_query($conn,$sql);
 
 ?>
@@ -57,7 +57,7 @@ $query = mysqli_query($conn,$sql);
                                         <th style="width: 5%;">#</th>
                                         <th style="width: 15%;"></th>
                                         <th style="width: 30%;">เนื้อหา</th>
-                                        <th style="width: 15%;">ลิงก์</th>
+                                        <th style="width: 15%;">กลุ่มเป้าหมาย</th>
                                         <th style="width: 15%;">งบโฆษณา</th>
                                         <th style="width: 20%;"></th>
                                     </tr>
@@ -70,7 +70,7 @@ $query = mysqli_query($conn,$sql);
                                             <img src="../img/<?php echo $row['ad_image'];?>" height="100"alt="">
                                         </td>
                                         <td><?php echo $row['ad_body'];?></td>
-                                        <td><?php echo $row['ad_link'];?></td>
+                                        <td><?php echo $row['cat_name'];?></td>
                                         <td><?php echo $row['ad_point'];?></td>
                                         <td>
                                             <a href="ads_edit.php?id=<?php echo $row['ad_id'];?>" class="btn btn-warning btn-sm">แก้ไข</a>

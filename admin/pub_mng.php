@@ -71,7 +71,7 @@ $query = mysqli_query($conn,$sql);
                                         <td><?php echo $row['post_body'];?></td>
                                         <td><?php echo $row['post_created'];?></td>
                                         <td>
-                                            <a href="../post_detail.php?id=<?php echo $row['post_id'];?>" class="btn btn-success btn-sm">แสดงความคิดเห็น</a>
+                                            <a href="../post_detail.php?id=<?php echo $row['post_id'];?>" class="btn btn-info btn-sm">ดู</a>
                                             <a href="pub_edit.php?id=<?php echo $row['post_id'];?>" class="btn btn-warning btn-sm">แก้ไข</a>
                                             <a onclick="return confirm('คุณแน่ใจ หรือไม่ ว่าจะลบ')" href="pub_proc/pub_del_proc.php?id=<?php echo $row['post_id'];?>" class="btn btn-danger btn-sm">ลบ</a>
                                         </td>
