@@ -54,3 +54,7 @@ body {
         margin: 0!important;
     }
 }
+
+#logout {
+    background: none!important;
+}
