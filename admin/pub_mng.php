@@ -40,13 +40,13 @@ $query = mysqli_query($conn,$sql);
                     
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="../index.php">หน้าแรก</a></li>
-                            <li class="breadcrumb-item active">จัดการส่วนประชาสัมพันธ์</li>
+                            <li class="breadcrumb-item active">จัดการโพสต์</li>
                         </ol>   
 
                         <div class="d-flex flex-wrap justify-content-between">
-                            <h3>จัดการส่วนประชาสัมพันธ์</h3>
+                            <h3>จัดการโพสต์</h3>
 
-                            <a href="pub_add.php" class="btn btn-primary">+ ส่วนประชาสัมพันธ์</a>
+                            <a href="pub_add.php" class="btn btn-primary">+ โพสต์</a>
                         </div>
 
                         <!-- Table!!! -->
