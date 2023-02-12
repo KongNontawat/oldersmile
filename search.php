@@ -73,7 +73,14 @@ $query_user = mysqli_query($conn, $sql);
                             <img src="icon/verify.png" alt="" class="ms-1" width="15" height="15">
                             <?php endif; ?>
                         </a>
-                        <a href="user_profile.php?id=<?php echo $user['user_id'] ?>" class="btn btn-outline-primary btn-sm">ดูโปรไฟล์</a>
+                        <?php
+                            $query_foll = mysqli_query($conn, "SELECT * FROM follow WHERE follower = '$my_id' AND following = '{$user['user_id']}'");
+                            if(mysqli_num_rows($query_foll) > 0):
+                        ?>
+                        <a href="user_proc/unfollow_proc.php?following=<?php echo $user['user_id'] ?>" class="btn btn-primary btn-sm">เลิกติดตาม</a>
+                        <?php else: ?>
+                        <a href="user_proc/follow_proc.php?following=<?php echo $user['user_id'] ?>" class="btn btn-outline-primary btn-sm">ติดตาม</a>
+                        <?php endif; ?>
                     </li>
                     <?php endforeach; ?>
                 </ul>
