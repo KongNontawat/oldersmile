@@ -11,6 +11,8 @@ if(isset($_GET['search'])) {
 
 $query = mysqli_query($conn,$sql);
 
+// TEST
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
