@@ -17,7 +17,6 @@
         <li><a class="ad" href="ad_mng.php"><img src="../icon/verify.png"  width="25" height="25" alt=""> อนุมัติโฆษณา</a></li>
         <li><a class="ads" href="ads_mng.php"><img src="../icon/promote.png" width="25" height="25" alt=""> จัดการโฆษณา</a></li>
         <hr class="my-1 border">
-        <hr class="my-1 border">
         <li><a target="bank_" href="../index.php"><img src="../icon/home.png" width="25" height="25" alt=""> กลับไปยังหน้าเว็บ</a></li>
         <li><a onclick="return confirm('ออกจากระบบ หรือไม่')" id="logout" href="auth_proc/logout.php" class="mt-3" style="color:red!important;">ออกจากระบบ</a>
         </li>
