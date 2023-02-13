@@ -112,9 +112,9 @@ $user_role = mysqli_query($conn,"SELECT *,COUNT(user_role) as count FROM user GR
                                         <thead>
                                             <tr>
                                                 <th style="width: 5%;">#</th>
-                                                <th style="width: 20%;">รูป</th>
-                                                <th style="width: 60%;">เนื้อหา</th>
-                                                <th style="width: 15%;">ยอดถูกใจ</th>
+                                                <th style="width: 15%;">รูป</th>
+                                                <th style="width: 55%;">เนื้อหา</th>
+                                                <th style="width: 25%;">ยอดถูกใจ</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -135,12 +135,13 @@ $user_role = mysqli_query($conn,"SELECT *,COUNT(user_role) as count FROM user GR
                             <div class="card shadow-sm">
                                 <div class="card-body">
                                     <h6 class="mb-3">โฆษณางบสูงสุด</h6>
+                                    <div class="table-responsive">
                                     <table class="table table-hover align-middle">
                                         <thead>
                                             <tr>
                                                 <th style="width: 5%;">#</th>
                                                 <th style="width: 20%;">รูป</th>
-                                                <th style="width: 50%;">เนื้อหา</th>
+                                                <th style="width: 55;">เนื้อหา</th>
                                                 <th style="width: 15%;">กลุ่มเป้าหมาย</th>
                                                 <th style="width: 10%;">งบโฆษณา</th>
                                             </tr>
@@ -157,6 +158,7 @@ $user_role = mysqli_query($conn,"SELECT *,COUNT(user_role) as count FROM user GR
                                             <?php endforeach;?>
                                         </tbody>
                                     </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>

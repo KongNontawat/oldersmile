@@ -46,7 +46,7 @@ $query = mysqli_query($conn,$sql);
                         <div class="d-flex flex-wrap justify-content-between">
                             <h3>จัดการโพสต์</h3>
 
-                            <a href="pub_add.php" class="btn btn-primary">+ โพสต์</a>
+                            <a href="pub_add.php" class="btn btn-primary px-5">+ โพสต์</a>
                         </div>
 
                         <!-- Table!!! -->
@@ -71,9 +71,11 @@ $query = mysqli_query($conn,$sql);
                                         <td><?php echo $row['post_body'];?></td>
                                         <td><?php echo $row['post_created'];?></td>
                                         <td>
-                                            <a href="../post_detail.php?id=<?php echo $row['post_id'];?>" class="btn btn-info btn-sm">ดู</a>
-                                            <a href="pub_edit.php?id=<?php echo $row['post_id'];?>" class="btn btn-warning btn-sm">แก้ไข</a>
-                                            <a onclick="return confirm('คุณแน่ใจ หรือไม่ ว่าจะลบ')" href="pub_proc/pub_del_proc.php?id=<?php echo $row['post_id'];?>" class="btn btn-danger btn-sm">ลบ</a>
+                                            <a href="../post_detail.php?id=<?php echo $row['post_id'];?>" class="btn btn-info btn-sm mb-3 px-3">
+                                                ดู
+                                            </a>
+                                            <a href="pub_edit.php?id=<?php echo $row['post_id'];?>" class="btn btn-warning btn-sm mb-3">แก้ไข</a>
+                                            <a onclick="return confirm('คุณแน่ใจ หรือไม่ ว่าจะลบ')" href="pub_proc/pub_del_proc.php?id=<?php echo $row['post_id'];?>" class="btn btn-danger btn-sm mb-3">ลบ</a>
                                         </td>
                                     </tr>
                                     <?php endforeach;?>
