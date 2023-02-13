@@ -20,6 +20,7 @@ $query = mysqli_query($conn,$sql);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../boostrap/bootstrap.min.css">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/admin.css">
@@ -57,9 +58,11 @@ $query = mysqli_query($conn,$sql);
                                 <a href="user_add.php" class="btn btn-primary me-3">+ เพิ่มสมาชิก</a>
 
                                 <form action="" method="get">
-                                    <div class="input-group">
+                                    <div class="input-group d-flex align-items-center">
                                         <input type="text" name="search" id="" class="form-control" placeholder="ค้นหา...">
-                                        <button type="submit" class="btn btn-outline-secondary">ค้นหา</button>
+                                        <button type="submit" class="btn btn-outline-secondary">
+                                            <i class="bi bi-search fs-6"></i>
+                                        </button>
                                     </div>
                                 </form>
                             </div>
