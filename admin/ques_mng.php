@@ -60,8 +60,8 @@ $query = mysqli_query($conn,$sql);
                                 <thead>
                                     <tr>
                                         <th style="width: 5%;">#</th>
-                                        <th style="width: 80%;">หัวข้อแบบประเมิน</th>
-                                        <th style="width: 15%;"></th>
+                                        <th style="width: 70%;">หัวข้อแบบประเมิน</th>
+                                        <th style="width: 25%;"></th>
                                     </tr>
                                 </thead>
                                 <tbody>
