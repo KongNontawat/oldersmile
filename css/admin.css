@@ -57,4 +57,9 @@ body {
 
 #logout {
     background: none!important;
+    color: red!important;
 }
+
+/* #logout:hover {
+    color: #fff!important;
+} */
