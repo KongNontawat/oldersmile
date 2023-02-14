@@ -48,11 +48,11 @@ $query = mysqli_query($conn,$sql);
                             <h3 class="mb-3">จัดการหมวดหมู่</h3>
 
                         </div>
-                        <form action="cat_proc/cat_add_proc.php" method="post" class="d-flex">
+                        <form action="cat_proc/cat_add_proc.php" method="post" class="d-flex flex-wrap">
                             <div class="me-3">
                                 <input style="width: 350px;" type="text" name="cat_name" id="" class="form-control" required placeholder="เพิ่มหมวดหมู่" autofocus>
                             </div>
-                            <button type="submit" class="btn btn-primary">+ เพิ่มหมวดหมู่</button>
+                            <button type="submit" class="btn btn-primary flex-wrap">+ เพิ่มหมวดหมู่</button>
                         </form>
 
                         <!-- Table!!! -->
@@ -61,8 +61,8 @@ $query = mysqli_query($conn,$sql);
                                 <thead>
                                     <tr>
                                         <th style="width: 5%;">#</th>
-                                        <th style="width: 80%;">หมวดหมู่</th>
-                                        <th style="width: 15%;"></th>
+                                        <th style="width: 70%;">หมวดหมู่</th>
+                                        <th style="width: 20%;"></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -75,8 +75,8 @@ $query = mysqli_query($conn,$sql);
                                                 <input type="hidden" name="cat_id" value="<?php echo $row['cat_id'];?>">
                                             </td>
                                             <td>
-                                                <button type="submit" class="btn btn-warning btn-sm">ปรับปรุง</button>
-                                                <a onclick="return confirm('คุณแน่ใจ หรือไม่ ว่าจะลบ')" href="cat_proc/cat_del_proc.php?id=<?php echo $row['cat_id'];?>" class="btn btn-danger btn-sm">ลบ</a>
+                                                <button type="submit" class="btn btn-warning btn-sm mb-3">ปรับปรุง</button>
+                                                <a onclick="return confirm('คุณแน่ใจ หรือไม่ ว่าจะลบ')" href="cat_proc/cat_del_proc.php?id=<?php echo $row['cat_id'];?>" class="btn btn-danger btn-sm mb-3">ลบ</a>
                                             </td>
                                         </tr>
                                     </form>

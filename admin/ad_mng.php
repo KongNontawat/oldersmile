@@ -73,8 +73,8 @@ $query = mysqli_query($conn,$sql);
                                         <td><?php echo $row['cat_name'];?></td>
                                         <td><?php echo $row['ad_point'];?></td>
                                         <td>
-                                            <a href="ad_proc/ad_allow_proc.php?id=<?php echo $row['ad_id'];?>&point=<?php echo $row['ad_point'];?>&user_id=<?php echo $row['user_id'];?>" class="btn btn-success px-4">อนุมัติ</a>
-                                            <a onclick="return confirm('คุณแน่ใจ หรือไม่ ว่าจะไม่อนุมัติ')" href="ad_proc/ad_cancel_proc.php?id=<?php echo $row['ad_id'];?>" class="btn btn-danger">ไม่อนุมัติ</a>
+                                            <a href="ad_proc/ad_allow_proc.php?id=<?php echo $row['ad_id'];?>&point=<?php echo $row['ad_point'];?>&user_id=<?php echo $row['user_id'];?>" class="btn btn-success px-4 btn-sm">อนุมัติ</a>
+                                            <a onclick="return confirm('คุณแน่ใจ หรือไม่ ว่าจะไม่อนุมัติ')" href="ad_proc/ad_cancel_proc.php?id=<?php echo $row['ad_id'];?>" class="btn btn-danger btn-sm">ไม่อนุมัติ</a>
                                         </td>
                                     </tr>
                                     <?php endforeach;?>
