@@ -1,12 +1,17 @@
 <?php
 session_start();
 date_default_timezone_set('Asia/Bangkok');
-error_reporting(0);
+// error_reporting(0);
 
 $host = 'localhost';
 $user = 'root';
 $pass = '';
 $dbname = 'oldersmile';
+
+// host:localhost
+// user:id20088549_oldersmile
+// pass:PR8pM72A=Xa0V}1A
+// dbname:id20088549_oldersmile_v3
 
 $conn = mysqli_connect($host, $user, $pass, $dbname);
 mysqli_query($conn, "SET NAMES UTF8");

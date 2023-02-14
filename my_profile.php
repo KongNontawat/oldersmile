@@ -71,19 +71,19 @@ $query_post = mysqli_query($conn, $sql2);
                     <div class="card-body text-center">
                         <h4 class="mt-3 mb-4 text-center">โปรไฟล์ของฉัน</h4>
                         
-                        <img src="img/<?php echo $row['user_image'] ?>" alt="" class="rounded-circle" width="150" height="150">
+                        <img src="img/<?php echo $row['user_image'] ?>" alt="" class="rounded-circle border border-2 shadow-sm" width="150" height="150">
                         <h4 class="my-3"><?php echo $row['user_name'] ?></h4>
                         <p class="mb-2">(รหัสสมาชิก : <?php echo $row['user_id'] ?>)</p>
                         <p class="mb-2">เพศ : <?php echo $row['user_gender'] ?></p>
                         <p class="mb-2">วันเกิด : <?php echo $row['user_dob'] ?></p>
                         <p class="mb-2">เบอร์โทร : <?php echo $row['user_tel'] ?></p>
-                        <?php if($row['user_role'] == 'partner'): ?>
                         <div class="d-flex align-items-center justify-content-center">
                             <img src="icon/money.png" alt="" class="me-2" width="40" height="40">
-                            <h4>รายได้ปัจจุบัน : <?php echo number_format($row['user_wallet']) ?> บาท</h4>
+                            <h4>เงินในกระเป๋า : <?php echo number_format($row['user_wallet']) ?> บาท</h4>
                         </div>
-                        <?php endif; ?>
+                        <?php if(mysqli_num_rows($query_my_cat) > 0): ?>
                         <h5 class="mt-4 mb-2">ความสนใจของฉัน</h5>
+                        <?php endif; ?>
 
 
                         <?php 

@@ -7,6 +7,9 @@ $following = [];
 foreach($query_user as $foll) {
     array_push($following, $foll['following']);
 }
+if(count($following) <= 0) {
+  header('location:follow_none.php');
+}
 $sql_post = "SELECT *,
     (SELECT SUM(post_like) FROM post_like WHERE p.post_id = post_id) AS post_like,
     (SELECT COUNT(*) FROM view_post  WHERE p.post_id = post_id) AS view_post,

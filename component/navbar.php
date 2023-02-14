@@ -19,7 +19,7 @@
                 <a href="register.php" class="btn btn-outline-primary d-none d-md-inline">สมัคร</a>
                 <?php endif; ?>
                 <?php if(isset($_SESSION['login']) AND $_SESSION['my_role'] != 'admin'): ?>
-                <p class="d-none d-md-inline">ยินดีต้อนรับคุณ : <?php echo $_SESSION['my_name'] ?></p>
+                <p class="d-none d-md-inline">สวัสดี : <?php echo $_SESSION['my_name'] ?></p>
                 <?php endif; ?>
 
                 <?php if(isset($_SESSION['login']) AND $_SESSION['my_role'] == 'admin'): ?>

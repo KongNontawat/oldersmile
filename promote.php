@@ -112,9 +112,10 @@ $query_cat6 = mysqli_query($conn, "SELECT * FROM category WHERE NOT cat_id = 1")
                         <?php endif; ?>
 
                         <p>เนื้อหา : <?php echo $ad['ad_body'] ?></p>
-                        <a href="<?php echo $ad['ad_body'] ?>" target="_blank" class="text-primary"><?php echo $ad['ad_body'] ?></a> <br>
+                        <p>งบโฆษณา : <?php echo number_format($ad['ad_point'],2) ?> บาท</p>
+                        <a href="<?php echo $ad['ad_link'] ?>" target="_blank" class="text-primary"><?php echo $ad['ad_link'] ?></a> <br>
                         <?php if($ad['ad_status'] == 0): ?>
-                        <a href="ad_proc/ad_cancel_proc.php?id=<?php echo $ad['ad_id'] ?>&user_id=<?php echo $ad['user_id'] ?>&point=<?php echo $ad['ad_point'] ?>" class="btn btn-danger px-4 mt-2">ยกเลิกโฆษณานี้</a>
+                        <a href="ad_proc/ad_cancel_proc.php?id=<?php echo $ad['ad_id'] ?>&user_id=<?php echo $ad['user_id'] ?>&point=<?php echo $ad['ad_point'] ?>" class="btn btn-sm btn-danger px-4 mt-2">ยกเลิกโฆษณานี้</a>
                         <?php endif; ?>
                     </div>
                 </div>
