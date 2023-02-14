@@ -11,9 +11,6 @@ $dbname = 'oldersmile';
 $conn = mysqli_connect($host, $user, $pass, $dbname);
 mysqli_query($conn, "SET NAMES UTF8");
 
-if(!isset($_SESSION['login'])) {
-    session_destroy();
-}
 
 function succ($path, $msg='') {
     $_SESSION['succ'] = $msg;
