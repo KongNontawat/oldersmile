@@ -1,5 +1,6 @@
 <?php
 include('../conn.php');
+include('../auth_proc/check_login2.php');
 
 $following = $_GET['following'];
 

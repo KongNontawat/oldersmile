@@ -1,6 +1,7 @@
 <?php
 
 include('../conn.php');
+include('../auth_proc/check_login2.php');
 
 $sender = $my_id;
 $receiver = $_GET['receiver'];

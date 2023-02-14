@@ -54,7 +54,14 @@ $query_post = mysqli_query($conn, $sql);
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="application-name" content="app">
+<meta name="apple-mobile-web-app-title" content="app">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="icon/icon.png">
+<link rel="apple-touch-icon" sizes="152x152" href="icon/icon.png" />
+<link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="boostrap/bootstrap.min.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/style.css">
@@ -99,7 +106,8 @@ $query_post = mysqli_query($conn, $sql);
                 <?php if(isset($_GET['cat_name'])): ?>
                 <h4 class="mb-2 mb-lg-3">เรื่องที่สนใจ : <?php echo $_GET['cat_name']; ?></h4>
                 <?php endif; ?>
-
+                
+                <?php if(!isset($_GET['cat_name'])): ?>
                 <div class="card shadow-sm mb-3">
                     <div class="card-body">
                         <h5 class="mb-3"><img src="icon/megaphone.png" class="me-2" width="25" height="25" alt="">ข่าวประชาสัมพันธ์</h5>
@@ -124,7 +132,7 @@ $query_post = mysqli_query($conn, $sql);
                         <a href="activity.php" class="btn btn-light col-12">ดูทั้งหมด</a>
                     </div>
                 </div>
-
+                <?php endif; ?>
 
 
                 <?php foreach($query_post as $i => $post): ?>

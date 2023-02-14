@@ -1,7 +1,7 @@
 <?php
 session_start();
 date_default_timezone_set('Asia/Bangkok');
-// error_reporting(0);
+error_reporting(0);
 
 $host = 'localhost';
 $user = 'root';
@@ -10,6 +10,10 @@ $dbname = 'oldersmile';
 
 $conn = mysqli_connect($host, $user, $pass, $dbname);
 mysqli_query($conn, "SET NAMES UTF8");
+
+if(!isset($_SESSION['login'])) {
+    session_destroy();
+}
 
 function succ($path, $msg='') {
     $_SESSION['succ'] = $msg;

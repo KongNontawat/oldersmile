@@ -10,7 +10,7 @@
     <ul class="sidebar-menu">
         <li><a class="dashboard" href="dashboard.php"><img src="../icon/chart2.png" width="25" height="25" alt=""> แดชบอร์ด</a></li>
         <li><a class="user" href="user_mng.php"><img src="../icon/people.png" width="25" height="25" alt=""> จัดการสมาชิก</a></li>
-        <li><a class="pub" href="pub_mng.php"><img src="../icon/megaphone.png" width="25" height="25" alt=""> จัดการส่วนประชาสัมพันธ์</a></li>
+        <li><a class="pub" href="pub_mng.php"><img src="../icon/megaphone.png" width="25" height="25" alt=""> จัดการโพสต์</a></li>
         <li><a class="cat" href="cat_mng.php"><img src="../icon/pin.png" width="25" height="25" alt=""> จัดการหมวดหมู่</a></li>
         <li><a class="part" href="part_mng.php"><img src="../icon/verify.png"  width="25" height="25" alt=""> อนุมัติการเป็นพาร์ทเนอร์</a></li>
         <li><a class="mar" href="mar_mng.php"><img src="../icon/verify.png"  width="25" height="25" alt=""> อนุมัติการเป็นผู้ค้า</a></li>

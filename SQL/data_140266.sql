@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 4.9.5
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Dec 22, 2022 at 12:47 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.1.12
+-- Host: localhost:3306
+-- Generation Time: Feb 14, 2023 at 10:26 AM
+-- Server version: 10.5.16-MariaDB
+-- PHP Version: 7.3.32
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -18,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `oldersmile`
+-- Database: `id20088549_oldersmile_v3`
 --
 
 -- --------------------------------------------------------
@@ -36,7 +37,7 @@ CREATE TABLE `advert` (
   `ad_image` varchar(60) NOT NULL,
   `ad_point` int(11) NOT NULL,
   `ad_status` int(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `advert`
@@ -45,8 +46,8 @@ CREATE TABLE `advert` (
 INSERT INTO `advert` (`ad_id`, `user_id`, `cat_id`, `ad_body`, `ad_link`, `ad_image`, `ad_point`, `ad_status`) VALUES
 (18, 1, 5, 'เปิดรับ สมัครผู้เชี่ยวชาญ เพื่อให้คำปรึกษา ด้านสุขภาพใน แอพพลิเคชั่นของเรา', 'https://shopee.co.th/', 'f540eb85e28d36fdd3bdefd77ee7cec1.png', 10, 1),
 (19, 1, 5, 'เปิดแล้ว!! วันนี้คลินิกหมอเทพ รักษาทุกโรค', 'https://shopee.co.th/', 'e77ecf4332c96581622163bffb1297b5.png', 10, 1),
-(20, 1, 6, 'เปิดรับ สมัครผู้เชี่ยวชาญ เพื่อให้คำปรึกษา ด้านสุขภาพใน แอพพลิเคชั่นของเรา', 'https://shopee.co.th/', '39ba008ec30d060d5dbf08f9b01cd869.png', 9, 1),
-(21, 1, 6, 'หมดปัญหา ปวดตามร่างกาย\r\nยาสมุนไพร บำรุงกระดูก ตรายา miniheart!!', 'https://shopee.co.th/', '261d95309de729728d6f3e5e72750e62.png', 10, 1),
+(20, 1, 6, 'เปิดรับ สมัครผู้เชี่ยวชาญ เพื่อให้คำปรึกษา ด้านสุขภาพใน แอพพลิเคชั่นของเรา', 'https://shopee.co.th/', '39ba008ec30d060d5dbf08f9b01cd869.png', 8, 1),
+(21, 1, 6, 'หมดปัญหา ปวดตามร่างกาย\r\nยาสมุนไพร บำรุงกระดูก ตรายา miniheart!!', 'https://shopee.co.th/', '261d95309de729728d6f3e5e72750e62.png', 9, 1),
 (22, 1, 7, 'เปิดรับ สมัครผู้เชี่ยวชาญ เพื่อให้คำปรึกษา ด้านสุขภาพใน แอพพลิเคชั่นของเรา', 'https://shopee.co.th/', 'a6b6b89f3b5e471358a509d634e09563.png', 10, 1),
 (23, 1, 7, 'สั่งเลย!! เมอร์เมด น้ำเต้าหู้สด ทำจาก ถั่วเหลือง จากธรรมชาติ 100%', 'https://shopee.co.th/', '0f309e77895d0e40922c07409ec12c25.png', 10, 1),
 (28, 7, 5, 'Banana Fit', 'https://shopee.co.th/', 'a06bad983302a4e53a39ee9fc81f08d5.png', 10, 1),
@@ -59,7 +60,8 @@ INSERT INTO `advert` (`ad_id`, `user_id`, `cat_id`, `ad_body`, `ad_link`, `ad_im
 (35, 1, 16, 'เปิดรับ สมัครผู้เชี่ยวชาญ เพื่อให้คำปรึกษา ด้านสุขภาพใน แอพพลิเคชั่นของเรา', 'https://shopee.co.th/', '9903e6b58c2a672d75b40ea8c0a4f850.png', 10, 1),
 (36, 1, 18, 'เปิดรับ สมัครผู้เชี่ยวชาญ เพื่อให้คำปรึกษา ด้านสุขภาพใน แอพพลิเคชั่นของเรา', 'https://shopee.co.th/', '9f283194fb1d373e385fe3a7e47b10f6.png', 10, 1),
 (37, 1, 18, 'การออกกำลังกาย ที่ถูกต้องเพื่อสุขภาพที่ดี', 'https://shopee.co.th/', '6d842c855416748bbb09b22e810d8e19.png', 10, 1),
-(38, 1, 17, 'Banana Fit', 'https://shopee.co.th/', '616806a278e4c8298e861af58bd489de.png', 10, 1);
+(38, 1, 17, 'Banana Fit', 'https://shopee.co.th/', '616806a278e4c8298e861af58bd489de.png', 9, 1),
+(39, 4, 5, 'ygfcfuicfibyfxycsdytcfdx', 'https://shopee.co.th/', '1b6f50a06eb30958bf0174c86914b6db.png', 250, 0);
 
 -- --------------------------------------------------------
 
@@ -70,7 +72,7 @@ INSERT INTO `advert` (`ad_id`, `user_id`, `cat_id`, `ad_body`, `ad_link`, `ad_im
 CREATE TABLE `category` (
   `cat_id` int(11) NOT NULL,
   `cat_name` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `category`
@@ -99,7 +101,7 @@ CREATE TABLE `comment` (
   `user_id` int(11) NOT NULL,
   `comm_body` text NOT NULL,
   `comm_created` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `comment`
@@ -127,7 +129,44 @@ INSERT INTO `comment` (`comm_id`, `post_id`, `user_id`, `comm_body`, `comm_creat
 (25, 15, 6, 'เม้น จาก iPhone 14 Pro', '21-12-2022'),
 (29, 11, 1, '>_<', '21-12-2022'),
 (34, 30, 1, '123', '21-12-2022'),
-(35, 30, 1, 'test', '21-12-2022');
+(35, 30, 1, 'test', '21-12-2022'),
+(36, 28, 26, 'test', '22-12-2022'),
+(37, 28, 26, 'test2', '22-12-2022'),
+(38, 30, 1, 'testttt', '22-12-2022'),
+(39, 30, 1, '3243244', '22-12-2022'),
+(40, 25, 28, 'test', '22-12-2022'),
+(41, 25, 28, 'test2', '22-12-2022'),
+(42, 25, 28, 'test3', '22-12-2022'),
+(43, 30, 1, '343242fdsfsd', '22-12-2022'),
+(44, 30, 1, '-=-=-=', '22-12-2022'),
+(45, 28, 31, 'test', '22-12-2022'),
+(46, 28, 31, 'test2', '22-12-2022'),
+(47, 30, 1, 'rewrwerwer', '22-12-2022'),
+(48, 30, 1, 'werwer', '22-12-2022'),
+(49, 23, 4, 'test', '27-12-2022'),
+(50, 23, 4, 'http://localhost/oldersmile_v3/icon/comment.png', '27-12-2022');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `follow`
+--
+
+CREATE TABLE `follow` (
+  `follower` int(11) NOT NULL,
+  `following` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `follow`
+--
+
+INSERT INTO `follow` (`follower`, `following`) VALUES
+(1, 11),
+(1, 21),
+(1, 6),
+(11, 1),
+(1, 4);
 
 -- --------------------------------------------------------
 
@@ -145,7 +184,7 @@ CREATE TABLE `market` (
   `mar_address` text NOT NULL,
   `mar_type` varchar(255) NOT NULL,
   `mar_status` int(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `market`
@@ -154,6 +193,35 @@ CREATE TABLE `market` (
 INSERT INTO `market` (`mar_id`, `user_id`, `mar_name`, `mar_fname`, `mar_email`, `mar_tel`, `mar_address`, `mar_type`, `mar_status`) VALUES
 (1, 6, 'test test', 'test test', 'test@gmail.com', '0956158702', 'test', 'test', 1),
 (2, 7, 'banana fit', 'ภูวดล เสนาะธรรม', 'guy@gmail.com', '09561580752', 'bang fai official', 'ร้านค้าออนไลน์', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `message`
+--
+
+CREATE TABLE `message` (
+  `sender` int(11) NOT NULL,
+  `receiver` int(11) NOT NULL,
+  `message` text NOT NULL,
+  `mes_created` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `message`
+--
+
+INSERT INTO `message` (`sender`, `receiver`, `message`, `mes_created`) VALUES
+(8, 11, 'hi', '11:02:23 07-02-2023'),
+(8, 11, 'aom', '11:02:25 07-02-2023'),
+(11, 8, 'hello', '11:02:06 07-02-2023'),
+(11, 8, 'how are you?', '11:02:17 07-02-2023'),
+(8, 11, 'sdf', '11:02:53 07-02-2023'),
+(8, 11, 'good i\"am find', '11:02:18 07-02-2023'),
+(11, 8, 'wefwef', '11:02:39 07-02-2023'),
+(11, 8, 'wefwef', '11:02:40 07-02-2023'),
+(11, 8, 'wefwef', '11:02:41 07-02-2023'),
+(8, 11, 'Nulla porttitor accumsan tincidunt. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vivamus suscipit tortor eget felis porttitor volutpat. Pellentesque in ipsum id orci porta dapibus.', '11:02:34 07-02-2023');
 
 -- --------------------------------------------------------
 
@@ -172,7 +240,7 @@ CREATE TABLE `partner` (
   `part_bank_acc` varchar(255) NOT NULL,
   `part_bank_name` varchar(60) NOT NULL,
   `part_status` int(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `partner`
@@ -195,16 +263,16 @@ CREATE TABLE `post` (
   `post_body` text NOT NULL,
   `post_media` varchar(60) NOT NULL,
   `post_created` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `post`
 --
 
 INSERT INTO `post` (`post_id`, `user_id`, `cat_id`, `post_body`, `post_media`, `post_created`) VALUES
-(9, 1, 1, 'สรุปข่าวเด่น', '6d7cc1060352da265b354bbf79c701ca.png', '21-12-2022'),
-(10, 1, 1, 'สรุปข่าวกีฬา', 'e359ff4ce9ca2dd2d157d6dab0f9bd44.png', '21-12-2022'),
-(11, 1, 1, 'ข่าวสารประจำวัน', '9990f3e038f8f42ba512af4b4169eb07.png', '21-12-2022'),
+(9, 20, 1, 'สรุปข่าวเด่น และสามารถดูข่าวสารเพิ่มเติมได้ที่ www.khaosod.co.th', '6d7cc1060352da265b354bbf79c701ca.png', '21-12-2022'),
+(10, 20, 1, 'สรุปข่าวกีฬามันๆ วันนี้ และสามารถดูข่าวสารเพิ่มเติมได้ที่ www.khaosod.co.th/home', 'e359ff4ce9ca2dd2d157d6dab0f9bd44.png', '21-12-2022'),
+(11, 20, 1, 'ข่าวสารประจำวัน ที่จะทำให้คุณไม่พลาดเรื่องเด็ดอย่างแน่นอน และสามารถดูข่าวสารเพิ่มเติมได้ที่ www.khaosod.co.th', '9990f3e038f8f42ba512af4b4169eb07.png', '21-12-2022'),
 (15, 20, 14, 'เปิดตัวแอพพลิเคชั่นโอลเดอร์สมาร์ย', 'eb05729cc35fb66d5b3def14889622c8.mp4', '21-12-2022'),
 (17, 4, 5, 'เลือกอาหารให้เหมาะสม และพอดี\r\nผู้สูงอายุเป็นวัยที่ร่างกายมีความต้องการต่อการใช้พลังงานลดน้อยลง เนื่องจากมีกิจกรรมที่ทำได้ไม่มากส่งผลให้แต่ละวันใช้พลังงานลดน้อยลง ดังนั้นจำเป็นอย่างยิ่งที่จะต้องควรลดการบริโภคในกลุ่มของแป้ง น้ำตาล และไขมันลง รวมถึงอาหารประเภทของผัด ของทอดที่ใช้น้ำมัน เพื่อลดการสะสมเนื่องจากไม่ถูกดึงนำไปใช้ ให้เน้นอาหารจำพวกโปรตีนจากเนื้อปลามากขึ้น และเปลี่ยนมาใช้อาหารประเภทต้ม นึ่ง ย่าง อบ เป็นหลัก', '0a381ea35635996c77f06009729e5f3a.png', '21-12-2022'),
 (18, 4, 14, 'ไม่ละเลยเรื่องยาและการพบแพทย์\r\nผู้ดูแลควรจัดยาให้ง่ายต่อการรับประทาน และใส่ใจให้ผู้สูงอายุรับประทานยาให้ตรงตามที่แพทย์แนะนำ ห้ามหยุดยาเอง และพบแพทย์ตามนัดอย่างเคร่งครัด ควรจดจำยาที่ผู้สูงอายุใช้ให้ได้และแจ้งรายการยาแก่แพทย์ทุกท่าน ทุกโรงพยาบาลที่ไปพบเพื่อป้องกันการจ่ายยาซ้ำซ้อน หรือยาที่ออกฤทธิ์ตีกัน นอกจากนี้เมื่อพบว่าผู้สูงอายุมีอาการเจ็บป่วย เช่น มีไข้ หอบเหนื่อย ซึมลง อาเจียนหรือท้องเสีย ถ้าอาการไม่ดีขึ้นภายใน 1 – 2 วัน ควรรีบพาผู้สูงอายุมาโรงพยาบาล ไม่ควรซื้อยารับประทานเอง\r\n', 'fa5e3dbfd99ef0a5bd3ac4c453c03800.png', '21-12-2022'),
@@ -216,8 +284,8 @@ INSERT INTO `post` (`post_id`, `user_id`, `cat_id`, `post_body`, `post_media`, `
 (24, 6, 18, 'เรื่องกินเรื่องใหญ่\r\nผู้สูงอายุส่วนใหญ่รับประทานอาหารได้น้อยลง เนื่องจากอวัยวะในร่างกายเสื่อมสภาพลง โดยเฉพาะระบบย่อยอาหาร ทำให้ท้องอืดเฟ้อ รวมถึงปัญหาช่องปากและฟัน ส่งผลให้เคี้ยวอาหารได้ไม่ละเอียด นอกจากนี้ผู้สูงวัยมักดื่มน้ำน้อย และขาดการออกกำลังกาย จึงเป็นสาเหตุของอาการท้องผูก ดังนั้นอาหารของผู้สูงอายุจึงควรเป็นอาหารที่อ่อนนุ่ม เคี้ยวง่าย อาจใช้การหั่น สับ หรือการปั่นให้อาหารชิ้นเล็ก รวมถึงปรับเปลี่ยนวิธีปรุงเป็นการนึ่ง ตุ๋น หรือ ต้มอาหารให้นิ่ม\r\n', '70f0a3f382225a936ccf166642ce4da3.jpg', '21-12-2022'),
 (25, 6, 16, 'อุปกรณ์ช่วยเดิน\r\nควรใช้อุปกรณ์ช่วยทรงตัวตามที่แพทย์แนะนำ อุปกรณ์ควรมีขนาดเหมาะกับผู้สูงวัยแต่ละท่าน รองเท้าควรเลือกที่มีความนุ่ม กระชับเท้า หุ้มส้นหรือมีสายรัดข้อเท้าไม่ให้หลุดง่าย และพื้นมีดอกยางยึดเกาะได้ดีและไม่ลื่น อย่าอายที่จะต้องใช้อุปกรณ์ช่วยทรงตัวหากต้องไปนอกบ้านหรือเดินไกลๆ เพราะจะช่วยลดอุบัติเหตุ และเป็นผู้ช่วยทำให้ผู้สูงวัยสามารถออกไปใช้ชีวิตด้วยตัวเองได้ ไม่กลายเป็นผู้ป่วยติดเตียง\r\n', '3b90e623b65b4bedd91ba238f680d9e8.jpg', '21-12-2022'),
 (26, 6, 5, 'ความสะอาด\r\nภูมิคุ้มกันของผู้สูงอายุไม่ค่อยแข็งแรงมักติดโรคได้ง่าย โดยเฉพาะผู้สูงอายุที่ไม่สามารถดูแลตัวเองได้หรือมีโรคเรื้อรัง เช่น เบาหวาน ผู้ดูแลควรใส่ใจดูแลฟัน เล็บ ผิวหนัง ผมและซอกหลืบต่างๆ ของร่างกาย รวมถึงบริเวณอวัยวะเพศและก้น ไม่ควรปล่อยให้อับชื้นและเกิดการระคายเคือง อาหารก็สำคัญ ไม่ควรนำอาหารค้างคืนมารับประทาน หรือเอายาเก่าๆ ที่อาจหมดอายุมาใช้ ซึ่งจะเป็นอันตรายต่อสุขภาพได้\r\n', '', '21-12-2022'),
-(28, 1, 7, 'เรื่องกินเรื่องใหญ่\r\nผู้สูงอายุส่วนใหญ่รับประทานอาหารได้น้อยลง เนื่องจากอวัยวะในร่างกายเสื่อมสภาพลง โดยเฉพาะระบบย่อยอาหาร ทำให้ท้องอืดเฟ้อ รวมถึงปัญหาช่องปากและฟัน ส่งผลให้เคี้ยวอาหารได้ไม่ละเอียด นอกจากนี้ผู้สูงวัยมักดื่มน้ำน้อย และขาดการออกกำลังกาย จึงเป็นสาเหตุของอาการท้องผูก ดังนั้นอาหารของผู้สูงอายุจึงควรเป็นอาหารที่อ่อนนุ่ม เคี้ยวง่าย อาจใช้การหั่น สับ หรือการปั่นให้อาหารชิ้นเล็ก รวมถึงปรับเปลี่ยนวิธีปรุงเป็นการนึ่ง ตุ๋น หรือ ต้มอาหารให้นิ่ม\r\n', '', '21-12-2022'),
-(30, 20, 1, 'ทรีปเที่ยวเป็นครอบครัว', 'f2c53a42c94d42ec985f387f3a7ffdcd.png', '21-12-2022');
+(28, 20, 7, 'เรื่องกินเรื่องใหญ่\r\nผู้สูงอายุส่วนใหญ่รับประทานอาหารได้น้อยลง เนื่องจากอวัยวะในร่างกายเสื่อมสภาพลง โดยเฉพาะระบบย่อยอาหาร ทำให้ท้องอืดเฟ้อ รวมถึงปัญหาช่องปากและฟัน ส่งผลให้เคี้ยวอาหารได้ไม่ละเอียด นอกจากนี้ผู้สูงวัยมักดื่มน้ำน้อย และขาดการออกกำลังกาย จึงเป็นสาเหตุของอาการท้องผูก ดังนั้นอาหารของผู้สูงอายุจึงควรเป็นอาหารที่อ่อนนุ่ม เคี้ยวง่าย อาจใช้การหั่น สับ หรือการปั่นให้อาหารชิ้นเล็ก รวมถึงปรับเปลี่ยนวิธีปรุงเป็นการนึ่ง ตุ๋น หรือ ต้มอาหารให้นิ่ม\r\n', '', '21-12-2022'),
+(30, 20, 1, 'โปรโมชั่นดีๆ ทริปเที่ยวเป็นครอบครัว ฟรีที่พักริมทะเล สามารถติดต่อสอบถามได้ที่ 064-487-0915', 'f2c53a42c94d42ec985f387f3a7ffdcd.png', '21-12-2022');
 
 -- --------------------------------------------------------
 
@@ -229,7 +297,7 @@ CREATE TABLE `post_like` (
   `post_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `post_like` int(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `post_like`
@@ -256,7 +324,16 @@ INSERT INTO `post_like` (`post_id`, `user_id`, `post_like`) VALUES
 (23, 14, 1),
 (24, 6, 1),
 (26, 6, 1),
-(10, 1, 1);
+(10, 1, 1),
+(28, 4, 1),
+(30, 4, 1),
+(30, 1, 1),
+(23, 1, 1),
+(26, 1, 1),
+(24, 1, 1),
+(21, 5, 1),
+(17, 5, 1),
+(26, 5, 1);
 
 -- --------------------------------------------------------
 
@@ -267,7 +344,7 @@ INSERT INTO `post_like` (`post_id`, `user_id`, `post_like`) VALUES
 CREATE TABLE `question` (
   `ques_id` int(11) NOT NULL,
   `ques_body` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `question`
@@ -290,7 +367,7 @@ CREATE TABLE `ques_answer` (
   `ques_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `ques_answer` int(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `ques_answer`
@@ -336,7 +413,22 @@ INSERT INTO `ques_answer` (`ques_id`, `user_id`, `ques_answer`) VALUES
 (13, 21, 1),
 (14, 21, 2),
 (15, 21, 3),
-(16, 21, 3);
+(16, 21, 3),
+(12, 26, 5),
+(13, 26, 3),
+(14, 26, 1),
+(15, 26, 2),
+(16, 26, 1),
+(12, 28, 5),
+(13, 28, 5),
+(14, 28, 5),
+(15, 28, 5),
+(16, 28, 5),
+(12, 31, 5),
+(13, 31, 5),
+(14, 31, 5),
+(15, 31, 5),
+(16, 31, 2);
 
 -- --------------------------------------------------------
 
@@ -354,29 +446,29 @@ CREATE TABLE `user` (
   `user_role` varchar(10) NOT NULL,
   `user_wallet` decimal(10,2) NOT NULL,
   `user_image` varchar(60) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`user_id`, `user_name`, `user_gender`, `user_dob`, `user_tel`, `user_pass`, `user_role`, `user_wallet`, `user_image`) VALUES
-(1, 'admin', 'หญิง', '2022-12-21', '0956158072', '202cb962ac59075b964b07152d234b70', 'admin', '2508710.00', 'd14fde21a0ce3d6a270a51a0c65fd593.png'),
-(4, 'market', 'ชาย', '2022-12-21', '0956158072', '202cb962ac59075b964b07152d234b70', 'market', '500.00', 'ddb960b847cd036c593ca236d9473bea.png'),
-(5, 'user', 'ชาย', '2022-12-21', '0956158072', '202cb962ac59075b964b07152d234b70', 'user', '0.00', '4b228ce2d8337cdb35412f3ddabc0e7a.png'),
-(6, 'fiws', 'ชาย', '2022-12-21', '0956158072', '202cb962ac59075b964b07152d234b70', 'market', '0.30', 'cb89f527fd3b57b7f330b88dd862a2e5.png'),
-(7, 'guy', 'ชาย', '2022-12-01', '065465465465', '202cb962ac59075b964b07152d234b70', 'market', '1490.00', 'caa1d823d10cc05015d144b813932071.png'),
-(8, 'kong', 'ชาย', '2022-12-21', '0956158072', '202cb962ac59075b964b07152d234b70', 'user', '0.00', 'a3d159beaafe51dad2cf116159bf711c.png'),
-(11, 'aom', 'หญิง', '2022-12-21', '0956158702', '202cb962ac59075b964b07152d234b70', 'partner', '0.00', '08cc99738b8665e723321f69b7689e0d.png'),
-(12, 'yam', 'หญิง', '2022-12-23', '0956158072', '202cb962ac59075b964b07152d234b70', 'user', '0.00', '34aa706f00f2bdd312ab7a6709f51362.png'),
-(13, 'fay', 'หญิง', '2022-12-21', '0956158072', '202cb962ac59075b964b07152d234b70', 'user', '0.00', '9e17f1fb3c124215069c786f828e283f.png'),
-(14, 'my', 'ชาย', '2022-12-21', '0956158072', '202cb962ac59075b964b07152d234b70', 'partner', '0.60', '5cee76151c95ca71cc838b1b261dac02.png'),
-(15, 'jonee', 'หญิง', '2022-12-21', '0956158702', '202cb962ac59075b964b07152d234b70', 'user', '0.00', '37da9f27a37b3967ccb8d4201a893878.png'),
-(16, 'jenny', 'หญิง', '2022-12-21', '0956158072', '202cb962ac59075b964b07152d234b70', 'user', '0.00', 'd6f914ed620ada2feff71009c83aee51.png'),
-(17, 'gift', 'หญิง', '2022-12-21', '0956158072', '202cb962ac59075b964b07152d234b70', 'user', '0.00', '49c84faf9ac1f4e9ff62c57fbe970217.png'),
-(19, 'leo', 'ชาย', '2022-12-21', '0956158072', '202cb962ac59075b964b07152d234b70', 'market', '0.00', '53a3fc62d6b7f66b3ca4eb1cc8671efb.png'),
-(20, 'OlderSmile Official', 'ชาย', '2022-12-01', '0644870915', '202cb962ac59075b964b07152d234b70', 'admin', '0.90', 'a77a56385bca4927109c790e0d6b2e0f.png'),
-(21, 'inwzaa', 'ชาย', '2022-12-01', '0644870915', '202cb962ac59075b964b07152d234b70', 'user', '0.00', 'a8ae5a43f172e6d9e17866540469bc03.jpg');
+(1, 'admin', 'หญิง', '2022-12-21', '0956158072', '202cb962ac59075b964b07152d234b70', 'admin', 2500.00, 'd14fde21a0ce3d6a270a51a0c65fd593.png'),
+(4, 'market', 'ชาย', '2022-12-21', '0956158072', '202cb962ac59075b964b07152d234b70', 'market', 500.00, 'ddb960b847cd036c593ca236d9473bea.png'),
+(5, 'user', 'ชาย', '2022-12-21', '0956158072', '202cb962ac59075b964b07152d234b70', 'user', 0.00, '4b228ce2d8337cdb35412f3ddabc0e7a.png'),
+(6, 'fiws', 'ชาย', '2022-12-21', '0956158072', '202cb962ac59075b964b07152d234b70', 'market', 0.30, 'cb89f527fd3b57b7f330b88dd862a2e5.png'),
+(7, 'guy', 'ชาย', '2022-12-01', '065465465465', '202cb962ac59075b964b07152d234b70', 'market', 1490.00, 'caa1d823d10cc05015d144b813932071.png'),
+(8, 'kong', 'ชาย', '2022-12-21', '0956158072', '202cb962ac59075b964b07152d234b70', 'user', 69.00, 'a3d159beaafe51dad2cf116159bf711c.png'),
+(11, 'aom', 'หญิง', '2022-12-21', '0956158702', '202cb962ac59075b964b07152d234b70', 'partner', 0.00, '08cc99738b8665e723321f69b7689e0d.png'),
+(12, 'yam', 'หญิง', '2022-12-23', '0956158072', '202cb962ac59075b964b07152d234b70', 'user', 0.00, '34aa706f00f2bdd312ab7a6709f51362.png'),
+(13, 'fay', 'หญิง', '2022-12-21', '0956158072', '202cb962ac59075b964b07152d234b70', 'user', 0.00, '9e17f1fb3c124215069c786f828e283f.png'),
+(14, 'my', 'ชาย', '2022-12-21', '0956158072', '202cb962ac59075b964b07152d234b70', 'partner', 1.20, '5cee76151c95ca71cc838b1b261dac02.png'),
+(15, 'jonee', 'หญิง', '2022-12-21', '0956158702', '202cb962ac59075b964b07152d234b70', 'user', 0.00, '37da9f27a37b3967ccb8d4201a893878.png'),
+(16, 'jenny', 'หญิง', '2022-12-21', '0956158072', '202cb962ac59075b964b07152d234b70', 'partner', 0.00, 'd6f914ed620ada2feff71009c83aee51.png'),
+(17, 'gift', 'หญิง', '2022-12-21', '0956158072', '202cb962ac59075b964b07152d234b70', 'user', 0.00, '49c84faf9ac1f4e9ff62c57fbe970217.png'),
+(19, 'leo', 'ชาย', '2022-12-21', '0956158072', '202cb962ac59075b964b07152d234b70', 'market', 0.00, '53a3fc62d6b7f66b3ca4eb1cc8671efb.png'),
+(20, 'OlderSmile Official', 'ชาย', '2022-12-01', '0644870915', '202cb962ac59075b964b07152d234b70', 'admin', 0.90, 'icon.png'),
+(21, 'inwzaa', 'ชาย', '2022-12-01', '0644870915', '202cb962ac59075b964b07152d234b70', 'user', 0.00, 'a8ae5a43f172e6d9e17866540469bc03.jpg');
 
 -- --------------------------------------------------------
 
@@ -387,7 +479,7 @@ INSERT INTO `user` (`user_id`, `user_name`, `user_gender`, `user_dob`, `user_tel
 CREATE TABLE `user_cat` (
   `user_id` int(11) NOT NULL,
   `cat_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `user_cat`
@@ -395,7 +487,6 @@ CREATE TABLE `user_cat` (
 
 INSERT INTO `user_cat` (`user_id`, `cat_id`) VALUES
 (4, 7),
-(1, 5),
 (21, 5),
 (21, 15),
 (21, 16),
@@ -404,7 +495,13 @@ INSERT INTO `user_cat` (`user_id`, `cat_id`) VALUES
 (8, 7),
 (8, 14),
 (8, 15),
-(8, 16);
+(8, 16),
+(26, 5),
+(28, 5),
+(31, 5),
+(1, 5),
+(1, 15),
+(1, 18);
 
 -- --------------------------------------------------------
 
@@ -417,7 +514,7 @@ CREATE TABLE `view_post` (
   `post_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `view` int(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `view_post`
@@ -465,7 +562,20 @@ INSERT INTO `view_post` (`view_id`, `post_id`, `user_id`, `view`) VALUES
 (43, 26, 8, 1),
 (45, 25, 8, 1),
 (47, 30, 1, 1),
-(48, 28, 8, 1);
+(48, 28, 8, 1),
+(49, 30, 8, 1),
+(50, 28, 26, 1),
+(51, 25, 28, 1),
+(52, 28, 31, 1),
+(53, 25, 4, 1),
+(54, 23, 4, 1),
+(55, 25, 1, 1),
+(56, 28, 1, 1),
+(57, 22, 1, 1),
+(58, 26, 1, 1),
+(59, 21, 5, 1),
+(60, 26, 5, 1),
+(61, 19, 5, 1);
 
 --
 -- Indexes for dumped tables
@@ -494,11 +604,25 @@ ALTER TABLE `comment`
   ADD KEY `comm_user` (`user_id`);
 
 --
+-- Indexes for table `follow`
+--
+ALTER TABLE `follow`
+  ADD KEY `foll_user` (`follower`),
+  ADD KEY `foll_user2` (`following`);
+
+--
 -- Indexes for table `market`
 --
 ALTER TABLE `market`
   ADD PRIMARY KEY (`mar_id`),
   ADD KEY `mar_user` (`user_id`);
+
+--
+-- Indexes for table `message`
+--
+ALTER TABLE `message`
+  ADD KEY `mes_user1` (`sender`),
+  ADD KEY `mes_user2` (`receiver`);
 
 --
 -- Indexes for table `partner`
@@ -564,7 +688,7 @@ ALTER TABLE `view_post`
 -- AUTO_INCREMENT for table `advert`
 --
 ALTER TABLE `advert`
-  MODIFY `ad_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `ad_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT for table `category`
@@ -576,7 +700,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `comm_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `comm_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT for table `market`
@@ -594,90 +718,43 @@ ALTER TABLE `partner`
 -- AUTO_INCREMENT for table `post`
 --
 ALTER TABLE `post`
-  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `question`
 --
 ALTER TABLE `question`
-  MODIFY `ques_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `ques_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `view_post`
 --
 ALTER TABLE `view_post`
-  MODIFY `view_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `view_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
 
 --
 -- Constraints for dumped tables
 --
 
 --
--- Constraints for table `advert`
+-- Constraints for table `follow`
 --
-ALTER TABLE `advert`
-  ADD CONSTRAINT `ad_cat` FOREIGN KEY (`cat_id`) REFERENCES `category` (`cat_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `ad_user` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `follow`
+  ADD CONSTRAINT `foll_user` FOREIGN KEY (`follower`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `foll_user2` FOREIGN KEY (`following`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `comment`
+-- Constraints for table `message`
 --
-ALTER TABLE `comment`
-  ADD CONSTRAINT `comm_post` FOREIGN KEY (`post_id`) REFERENCES `post` (`post_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `comm_user` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `market`
---
-ALTER TABLE `market`
-  ADD CONSTRAINT `mar_user` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `partner`
---
-ALTER TABLE `partner`
-  ADD CONSTRAINT `part_user` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `post`
---
-ALTER TABLE `post`
-  ADD CONSTRAINT `post_cat` FOREIGN KEY (`cat_id`) REFERENCES `category` (`cat_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `post_user` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `post_like`
---
-ALTER TABLE `post_like`
-  ADD CONSTRAINT `like_post` FOREIGN KEY (`post_id`) REFERENCES `post` (`post_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `like_user` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `ques_answer`
---
-ALTER TABLE `ques_answer`
-  ADD CONSTRAINT `answer_ques` FOREIGN KEY (`ques_id`) REFERENCES `question` (`ques_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `answer_user` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `user_cat`
---
-ALTER TABLE `user_cat`
-  ADD CONSTRAINT `cat_cat` FOREIGN KEY (`cat_id`) REFERENCES `category` (`cat_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `cat_user` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `view_post`
---
-ALTER TABLE `view_post`
-  ADD CONSTRAINT `view_post` FOREIGN KEY (`post_id`) REFERENCES `post` (`post_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `view_user` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `message`
+  ADD CONSTRAINT `mes_user1` FOREIGN KEY (`sender`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `mes_user2` FOREIGN KEY (`receiver`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
