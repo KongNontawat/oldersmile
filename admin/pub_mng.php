@@ -69,7 +69,7 @@ $query = mysqli_query($conn,$sql);
                                         <td>
                                             <img src="../img/<?php echo $row['post_media'];?>" height="100"alt="">
                                         </td>
-                                        <td><?php echo $row['post_body'];?></td>
+                                        <td><p class="text-o-1"><?php echo $row['post_body'];?></p></td>
                                         <td><?php echo $row['post_created'];?></td>
                                         <td>
                                             <a href="../post_detail.php?id=<?php echo $row['post_id'];?>" class="btn btn-info btn-sm mb-3 px-3">
