@@ -68,9 +68,10 @@ $row = mysqli_fetch_assoc($query);
                                         <input type="hidden" name="old_media" value="<?php echo $row['post_media'];?>">
                                     </div>
 
+
                                     <div class="mt-5">
-                                        <a onclick="window.history.back()" href="#" class="btn btn-secondary">กลับ</a>
-                                        <button type="submit" class="btn btn-primary px-5">แก้ไขข้อมูล</button>
+                                        <a onclick="window.history.back()" href="#" class="btn btn-secondary"><img src="../icon/back.png" alt=""></a>
+                                        <button type="submit" class="btn btn-primary px-4"><img src="../icon/edit.png" style="filter:invert(1);" alt=""></button>
                                     </div>
 
 

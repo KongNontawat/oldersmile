@@ -108,8 +108,8 @@ include('auth_proc/check_login.php');
 
                                     <div class="mt-5">
                                         <a onclick="window.history.back()" href="#" class="btn btn-secondary"><img src="../icon/back.png" alt=""></a>
-                                        <button type="reset" class="btn btn-info"><img src="../icon/reset.png" alt=""></button>
-                                        <button type="submit" class="btn btn-primary px-5">บันทึกข้อมูล</button>
+                                        <button type="reset" class="btn btn-info px-4"><img src="../icon/reset.png" alt=""></button>
+                                        <button type="submit" class="btn btn-primary px-4"><img src="../icon/save.png" style="filter:invert(1);" alt=""></button>
                                     </div>
 
 
