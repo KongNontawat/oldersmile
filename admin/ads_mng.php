@@ -2,7 +2,7 @@
 include('../conn.php');
 include('auth_proc/check_login.php');
 
-$sql = "SELECT * FROM advert AS a LEFT JOIN category AS c ON a.cat_id = c.cat_id WHERE ad_status = 1";
+$sql = "SELECT * FROM advert AS a LEFT JOIN category AS c ON a.cat_id = c.cat_id WHERE ad_status = 1 Order by a.ad_id desc";
 $query = mysqli_query($conn,$sql);
 
 ?>
@@ -70,11 +70,11 @@ $query = mysqli_query($conn,$sql);
                                         <td>
                                             <img src="../img/<?php echo $row['ad_image'];?>" height="100"alt="">
                                         </td>
-                                        <td><?php echo $row['ad_body'];?></td>
+                                        <td><p class="text-o-3"><?php echo $row['ad_body'];?></p></td>
                                         <td><?php echo $row['cat_name'];?></td>
                                         <td><?php echo $row['ad_point'];?></td>
                                         <td>
-                                            <a href="ads_edit.php?id=<?php echo $row['ad_id'];?>" class="btn btn-warning btn-sm">แก้ไข</a>
+                                            <a href="ads_edit.php?id=<?php echo $row['ad_id'];?>" class="btn btn-warning btn-sm"><img src="../icon/edit.png" alt=""/></a>
                                             <a onclick="return confirm('คุณแน่ใจ หรือไม่ ว่าจะยกเลิก')" href="ads_proc/ads_cancel_proc.php?id=<?php echo $row['ad_id'];?>&point=<?php echo $row['ad_point'];?>&user_id=<?php echo $row['user_id'];?>" class="btn btn-danger btn-sm">ยกเลิก</a>
                                         </td>
                                     </tr>
