@@ -14,6 +14,8 @@ $query_user = mysqli_query($conn, $sql);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="icon/icon.png">
+<link rel="apple-touch-icon" sizes="152x152" href="icon/icon.png" />
     <link rel="stylesheet" href="boostrap/bootstrap.min.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/style.css">
@@ -73,7 +75,14 @@ $query_user = mysqli_query($conn, $sql);
                             <img src="icon/verify.png" alt="" class="ms-1" width="15" height="15">
                             <?php endif; ?>
                         </a>
-                        <a href="user_profile.php?id=<?php echo $user['user_id'] ?>" class="btn btn-outline-primary btn-sm">ดูโปรไฟล์</a>
+                        <?php
+                            $query_foll = mysqli_query($conn, "SELECT * FROM follow WHERE follower = '$my_id' AND following = '{$user['user_id']}'");
+                            if(mysqli_num_rows($query_foll) > 0):
+                        ?>
+                        <a href="user_proc/unfollow_proc.php?following=<?php echo $user['user_id'] ?>" class="btn btn-primary btn-sm">เลิกติดตาม</a>
+                        <?php else: ?>
+                        <a href="user_proc/follow_proc.php?following=<?php echo $user['user_id'] ?>" class="btn btn-outline-primary btn-sm">ติดตาม</a>
+                        <?php endif; ?>
                     </li>
                     <?php endforeach; ?>
                 </ul>

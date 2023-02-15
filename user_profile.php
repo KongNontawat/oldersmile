@@ -29,6 +29,8 @@ $query_post = mysqli_query($conn, $sql2);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="icon/icon.png">
+<link rel="apple-touch-icon" sizes="152x152" href="icon/icon.png" />
     <link rel="stylesheet" href="boostrap/bootstrap.min.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/style.css">
@@ -68,18 +70,30 @@ $query_post = mysqli_query($conn, $sql2);
                     <div class="card-body text-center">
                         <h4 class="mt-3 mb-4 text-center">โปรไฟล์</h4>
                         
-                        <img src="img/<?php echo $row['user_image'] ?>" alt="" class="rounded-circle" width="150" height="150">
+                        <img src="img/<?php echo $row['user_image'] ?>" alt="" class="rounded-circle border border-2 shadow-sm" width="150" height="150">
                         <h4 class="my-3"><?php echo $row['user_name'] ?></h4>
                         <p class="mb-2">(รหัสสมาชิก : <?php echo $row['user_id'] ?>)</p>
                         <p class="mb-2">เพศ : <?php echo $row['user_gender'] ?></p>
                         <p class="mb-2">วันเกิด : <?php echo $row['user_dob'] ?></p>
                         <p class="mb-2">เบอร์โทร : <?php echo $row['user_tel'] ?></p>
-
+                        <?php
+                            $query_foll = mysqli_query($conn, "SELECT * FROM follow WHERE follower = '$my_id' AND following = '{$row['user_id']}'");
+                            if(mysqli_num_rows($query_foll) > 0):
+                        ?>
+                        <a href="user_proc/unfollow_proc.php?following=<?php echo $row['user_id'] ?>" class="btn btn-primary btn-sm mt-2">เลิกติดตาม</a>
+                        <?php else: ?>
+                        <a href="user_proc/follow_proc.php?following=<?php echo $row['user_id'] ?>" class="btn btn-outline-primary btn-sm mt-2">ติดตาม</a>
+                        <?php endif; ?>
+                        <a href="chat.php?id=<?php echo $row['user_id']; ?>" class="btn btn-outline-primary btn-sm ms-2 mt-2">พูดคุย</a>
+                        <?php 
+                        $query_my_cat_4 = mysqli_query($conn, "SELECT * FROM user_cat AS uc LEFT JOIN category AS c ON uc.cat_id = c.cat_id WHERE user_id = '$id'");
+                        if(mysqli_num_rows($query_my_cat_4)>0):
+                        ?>
                         <h5 class="mt-4 mb-2">ความสนใจของเขา</h5>
+                        <?php endif; ?>
 
 
                         <?php 
-                        $query_my_cat_4 = mysqli_query($conn, "SELECT * FROM user_cat AS uc LEFT JOIN category AS c ON uc.cat_id = c.cat_id WHERE user_id = '$id'");
                         foreach($query_my_cat_4 as $my_cat4):
                         ?>
                         <a href="index.php?cat_id=<?php echo $my_cat4['cat_id'] ?>&cat_name=<?php echo $my_cat4['cat_name'] ?>" class="rounded-3 px-1 text-primary">#<?php echo $my_cat4['cat_name'] ?></a>

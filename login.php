@@ -8,12 +8,14 @@ include('conn.php');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="icon/icon.png">
+<link rel="apple-touch-icon" sizes="152x152" href="icon/icon.png" />
     <link rel="stylesheet" href="boostrap/bootstrap.min.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/style.css">
     <title>OlderSmile</title>
 </head>
-<body class="w-100 vh-100 d-flex justify-content-center align-items-center">
+<body class="w-100 vh-100 d-flex justify-content-center align-items-center px-2">
     <!-- Alert -->
 
     <main class="w-100" style="max-width:450px">
@@ -37,7 +39,7 @@ include('conn.php');
 
                     <div class="mt-4 text-center">
                         <button type="submit" class="btn btn-primary col-12 btn-lg mb-3">เข้าสู่ระบบ</button>
-                        <a href="register.php" class="text-link">สมัครสมาชิก?</a>
+                        <a href="register.php" class="text-link text-primary">สมัครสมาชิก?</a>
                     </div>
                 </form>
             </div>

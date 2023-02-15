@@ -54,3 +54,12 @@ body {
         margin: 0!important;
     }
 }
+
+#logout {
+    background: none!important;
+    color: red!important;
+}
+
+/* #logout:hover {
+    color: #fff!important;
+} */

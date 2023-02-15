@@ -13,6 +13,7 @@ $query = mysqli_query($conn,$sql);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../icon/icon.png">
     <link rel="stylesheet" href="../boostrap/bootstrap.min.css">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/admin.css">
@@ -40,13 +41,13 @@ $query = mysqli_query($conn,$sql);
                     
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="../index.php">หน้าแรก</a></li>
-                            <li class="breadcrumb-item active">จัดการส่วนประชาสัมพันธ์</li>
+                            <li class="breadcrumb-item active">จัดการโพสต์</li>
                         </ol>   
 
                         <div class="d-flex flex-wrap justify-content-between">
-                            <h3>จัดการส่วนประชาสัมพันธ์</h3>
+                            <h3>จัดการโพสต์</h3>
 
-                            <a href="pub_add.php" class="btn btn-primary">+ ส่วนประชาสัมพันธ์</a>
+                            <a href="pub_add.php" class="btn btn-primary px-5">+ โพสต์</a>
                         </div>
 
                         <!-- Table!!! -->
@@ -71,9 +72,11 @@ $query = mysqli_query($conn,$sql);
                                         <td><?php echo $row['post_body'];?></td>
                                         <td><?php echo $row['post_created'];?></td>
                                         <td>
-                                            <a href="../post_detail.php?id=<?php echo $row['post_id'];?>" class="btn btn-success btn-sm">แสดงความคิดเห็น</a>
-                                            <a href="pub_edit.php?id=<?php echo $row['post_id'];?>" class="btn btn-warning btn-sm">แก้ไข</a>
-                                            <a onclick="return confirm('คุณแน่ใจ หรือไม่ ว่าจะลบ')" href="pub_proc/pub_del_proc.php?id=<?php echo $row['post_id'];?>" class="btn btn-danger btn-sm">ลบ</a>
+                                            <a href="../post_detail.php?id=<?php echo $row['post_id'];?>" class="btn btn-info btn-sm mb-3 px-3">
+                                                ดู
+                                            </a>
+                                            <a href="pub_edit.php?id=<?php echo $row['post_id'];?>" class="btn btn-warning btn-sm mb-3">แก้ไข</a>
+                                            <a onclick="return confirm('คุณแน่ใจ หรือไม่ ว่าจะลบ')" href="pub_proc/pub_del_proc.php?id=<?php echo $row['post_id'];?>" class="btn btn-danger btn-sm mb-3">ลบ</a>
                                         </td>
                                     </tr>
                                     <?php endforeach;?>

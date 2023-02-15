@@ -13,6 +13,7 @@ $query = mysqli_query($conn,$sql);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../icon/icon.png">
     <link rel="stylesheet" href="../boostrap/bootstrap.min.css">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/admin.css">
@@ -60,8 +61,8 @@ $query = mysqli_query($conn,$sql);
                                 <thead>
                                     <tr>
                                         <th style="width: 5%;">#</th>
-                                        <th style="width: 80%;">หัวข้อแบบประเมิน</th>
-                                        <th style="width: 15%;"></th>
+                                        <th style="width: 70%;">หัวข้อแบบประเมิน</th>
+                                        <th style="width: 25%;"></th>
                                     </tr>
                                 </thead>
                                 <tbody>

@@ -30,6 +30,8 @@ $query_post = mysqli_query($conn, $sql2);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="icon/icon.png">
+<link rel="apple-touch-icon" sizes="152x152" href="icon/icon.png" />
     <link rel="stylesheet" href="boostrap/bootstrap.min.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/style.css">
@@ -69,19 +71,19 @@ $query_post = mysqli_query($conn, $sql2);
                     <div class="card-body text-center">
                         <h4 class="mt-3 mb-4 text-center">โปรไฟล์ของฉัน</h4>
                         
-                        <img src="img/<?php echo $row['user_image'] ?>" alt="" class="rounded-circle" width="150" height="150">
+                        <img src="img/<?php echo $row['user_image'] ?>" alt="" class="rounded-circle border border-2 shadow-sm" width="150" height="150">
                         <h4 class="my-3"><?php echo $row['user_name'] ?></h4>
                         <p class="mb-2">(รหัสสมาชิก : <?php echo $row['user_id'] ?>)</p>
                         <p class="mb-2">เพศ : <?php echo $row['user_gender'] ?></p>
                         <p class="mb-2">วันเกิด : <?php echo $row['user_dob'] ?></p>
                         <p class="mb-2">เบอร์โทร : <?php echo $row['user_tel'] ?></p>
-                        <?php if($row['user_role'] == 'partner'): ?>
                         <div class="d-flex align-items-center justify-content-center">
                             <img src="icon/money.png" alt="" class="me-2" width="40" height="40">
-                            <h4>รายได้ปัจจุบัน : <?php echo number_format($row['user_wallet']) ?> บาท</h4>
+                            <h4>เงินในกระเป๋า : <?php echo number_format($row['user_wallet']) ?> บาท</h4>
                         </div>
-                        <?php endif; ?>
+                        <?php if(mysqli_num_rows($query_my_cat) > 0): ?>
                         <h5 class="mt-4 mb-2">ความสนใจของฉัน</h5>
+                        <?php endif; ?>
 
 
                         <?php 
@@ -98,8 +100,8 @@ $query_post = mysqli_query($conn, $sql2);
 
                         <?php if($row['user_role'] == 'user'): ?>
                         <div class="mt-2">
-                            <a href="part.php" class="text-success">สมัครเป็นพันธ์มิตรกับเรา?</a> <br>
-                            <a href="mar.php" class="text-warning">สมัครเป็นร้านกับเรา?</a>
+                            <a href="part.php" class="text-success d-block mt-3">สมัครเป็นพันธ์มิตรกับเรา?</a>
+                            <a href="mar.php" class="text-warning d-block mt-2">สมัครเป็นร้านกับเรา?</a>
                         </div>
                         <?php endif; ?>
                         <div class="mt-4">
@@ -108,9 +110,9 @@ $query_post = mysqli_query($conn, $sql2);
 
                     </div>
                 </div>
-
+<?php if(mysqli_num_rows($query_post)>0): ?>
                 <h4 class="my-3">โพสต์ของฉัน</h4>
-
+<?php endif; ?>
                 <?php foreach($query_post as $i => $post): ?>
                 <div class="card mb-3 shadow-sm">
                     <div class="card-header bg-white d-flex align-items-center justify-content-between">

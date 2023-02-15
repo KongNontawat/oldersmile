@@ -8,12 +8,14 @@ include('conn.php');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="icon/icon.png">
+<link rel="apple-touch-icon" sizes="152x152" href="icon/icon.png" />
     <link rel="stylesheet" href="boostrap/bootstrap.min.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/style.css">
     <title>OlderSmile</title>
 </head>
-<body class="w-100 vh-100 d-flex justify-content-center align-items-center">
+<body class="w-100 d-flex justify-content-center align-items-center py-5 px-2">
     <!-- Alert -->
 
     <main class="w-100" style="max-width:650px">
@@ -67,7 +69,9 @@ include('conn.php');
                                         <label class="input-group-text" for="image">รูปโปรไฟล์</label>
                                         <input type="file" name="user_image" id="image" accept="image/*" class="form-control">
                                     </div>
-
+            <div class="text-center mt-2">
+              <img src="" class="rounded-4" alt="" id="imgpreview" style="width: 200px;max-height:200px;">
+            </div>
                                     <h4 class="my-3">ความสนใจของคุณ</h4>
                                     <?php 
                                     $query_my_cat_2 = mysqli_query($conn, "SELECT * FROM category WHERE NOT cat_id = 1");
@@ -81,7 +85,7 @@ include('conn.php');
 
                     <div class="mt-4 text-center">
                         <button type="submit" class="btn btn-primary col-12 btn-lg mb-3">สมัครสมาชิก</button>
-                        <a href="login.php" class="text-link">เข้าสู่ระบบ?</a>
+                        <a href="login.php" class="text-link text-primary">เข้าสู่ระบบ?</a>
                     </div>
                 </form>
             </div>

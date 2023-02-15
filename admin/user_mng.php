@@ -11,6 +11,7 @@ if(isset($_GET['search'])) {
 
 $query = mysqli_query($conn,$sql);
 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,6 +20,8 @@ $query = mysqli_query($conn,$sql);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="../icon/icon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../boostrap/bootstrap.min.css">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/admin.css">
@@ -56,9 +59,11 @@ $query = mysqli_query($conn,$sql);
                                 <a href="user_add.php" class="btn btn-primary me-3">+ เพิ่มสมาชิก</a>
 
                                 <form action="" method="get">
-                                    <div class="input-group">
+                                    <div class="input-group d-flex align-items-center">
                                         <input type="text" name="search" id="" class="form-control" placeholder="ค้นหา...">
-                                        <button type="submit" class="btn btn-outline-secondary">ค้นหา</button>
+                                        <button type="submit" class="btn btn-outline-secondary">
+                                            <i class="bi bi-search fs-6"></i>
+                                        </button>
                                     </div>
                                 </form>
                             </div>
@@ -70,13 +75,13 @@ $query = mysqli_query($conn,$sql);
                                 <thead>
                                     <tr>
                                         <th style="width: 5%;">#</th>
-                                        <th style="width: 10%;"></th>
-                                        <th style="width: 15%;">ชื่อผู้ใช้</th>
-                                        <th style="width: 15%;">เบอร์โทร</th>
-                                        <th style="width: 10%;">เพศ</th>
+                                        <th style="width: 5%;"></th>
+                                        <th style="width: 20%;">ชื่อผู้ใช้</th>
+                                        <th style="width: 12%;">เบอร์โทร</th>
+                                        <th style="width: 8%;">เพศ</th>
                                         <th style="width: 15%;">วันเกิด</th>
                                         <th style="width: 10%;">สถานะ</th>
-                                        <th style="width: 15%;"></th>
+                                        <th style="width: 20%;"></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -84,7 +89,7 @@ $query = mysqli_query($conn,$sql);
                                     <tr>
                                         <td><?php echo $i+1;?></td>
                                         <td>
-                                            <img src="../img/<?php echo $row['user_image'];?>" class="rounded-circle" height="50" width="50" alt="">
+                                            <img src="../img/<?php echo $row['user_image'];?>" class="rounded-circle" height="40" width="40" alt="">
                                         </td>
                                         <td><?php echo $row['user_name'];?></td>
                                         <td><?php echo $row['user_tel'];?></td>
@@ -103,9 +108,9 @@ $query = mysqli_query($conn,$sql);
 
                                         </td>
                                         <td>
-                                            <a href="user_edit.php?id=<?php echo $row['user_id'];?>" class="btn btn-warning btn-sm"><img src="../icon/edit.png" alt=""/> แก้ไข</a>
+                                            <a href="user_edit.php?id=<?php echo $row['user_id'];?>" class="btn btn-warning btn-sm mb-3"><img src="../icon/edit.png" alt=""/> แก้ไข</a>
                                             <?php if($row['user_id']!==$my_id):?>
-                                            <a onclick="return confirm('คุณแน่ใจ หรือไม่ ว่าจะลบ')" href="user_proc/user_del_proc.php?id=<?php echo $row['user_id'];?>" class="btn btn-danger btn-sm"><img src="../icon/trash.png" style="filter:invert(1);" alt=""/>ลบ</a>
+                                            <a onclick="return confirm('คุณแน่ใจ หรือไม่ ว่าจะลบ')" href="user_proc/user_del_proc.php?id=<?php echo $row['user_id'];?>" class="btn btn-danger btn-sm mb-3"><img src="../icon/trash.png" style="filter:invert(1);" alt=""/>ลบ</a>
                                             <?php endif;?>
                                         </td>
                                     </tr>
