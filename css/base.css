@@ -54,6 +54,13 @@ dl dd {
     height: 20px!important;
 }
 
+.btn.btn-secondary img,
+.btn.btn-danger img,
+.btn.btn-info img,
+.btn.btn-success img {
+    filter: invert(1)!important;
+}
+
 .btn,
 .form-control,
 .form-select,
