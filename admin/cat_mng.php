@@ -76,7 +76,7 @@ $query = mysqli_query($conn,$sql);
                                             </td>
                                             <td>
                                                 <button type="submit" class="btn btn-warning btn-sm mb-3"><img src="../icon/save.png" alt=""></button>
-                                                <a onclick="return confirm('คุณแน่ใจ หรือไม่ ว่าจะลบ')" href="cat_proc/cat_del_proc.php?id=<?php echo $row['cat_id'];?>" class="btn btn-danger btn-sm mb-3">ลบ</a>
+                                                <a onclick="return confirm('คุณแน่ใจ หรือไม่ ว่าจะลบ')" href="cat_proc/cat_del_proc.php?id=<?php echo $row['cat_id'];?>" class="btn btn-danger btn-sm mb-3"><img src="../icon/trash.png" style="filter: invert(1);" alt=""></a>
                                             </td>
                                         </tr>
                                     </form>

@@ -56,7 +56,7 @@ $query = mysqli_query($conn,$sql);
                             <h3>จัดการสมาชิก</h3>
 
                             <div class="d-flex flex-wrap">
-                                <a href="user_add.php" class="btn btn-primary me-3">+ เพิ่มสมาชิก</a>
+                                <a href="user_add.php" class="btn btn-primary me-3">+ <i class="bi bi-person-fill"></i> เพิ่มสมาชิก</a>
 
                                 <form action="" method="get">
                                     <div class="input-group d-flex align-items-center">

@@ -75,7 +75,7 @@ $query = mysqli_query($conn,$sql);
                                         <td><?php echo $row['ad_point'];?></td>
                                         <td>
                                             <a href="ads_edit.php?id=<?php echo $row['ad_id'];?>" class="btn btn-warning btn-sm"><img src="../icon/edit.png" alt=""/></a>
-                                            <a onclick="return confirm('คุณแน่ใจ หรือไม่ ว่าจะยกเลิก')" href="ads_proc/ads_cancel_proc.php?id=<?php echo $row['ad_id'];?>&point=<?php echo $row['ad_point'];?>&user_id=<?php echo $row['user_id'];?>" class="btn btn-danger btn-sm">ยกเลิก</a>
+                                            <a onclick="return confirm('คุณแน่ใจ หรือไม่ ว่าจะยกเลิก')" href="ads_proc/ads_cancel_proc.php?id=<?php echo $row['ad_id'];?>&point=<?php echo $row['ad_point'];?>&user_id=<?php echo $row['user_id'];?>" class="btn btn-danger btn-sm"><img src="../icon/cancel.png" style="height:15px!important; width:15px!important; filter: invert(1);" alt=""></a>
                                         </td>
                                     </tr>
                                     <?php endforeach;?>
