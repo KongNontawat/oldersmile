@@ -81,8 +81,10 @@ $query = mysqli_query($conn,$sql);
                                         <label class="input-group-text" for="image">ภาพโฆษณา</label>
                                         <input type="file" name="ad_image" accept="image/*" id="image" class="form-control" required>
                                     </div>
-
-                                    <div class="mt-5">
+                                    <div class="text-center mt-2">
+              <img src="" class="rounded-4" alt="" id="imgpreview" style="width: 200px;max-height:200px;">
+            </div>
+                                    <div class="mt-3">
                                         <a onclick="window.history.back()" href="#" class="btn btn-secondary">กลับ</a>
                                         <button type="reset" class="btn btn-info">ล้างข้อมูล</button>
                                         <button type="submit" class="btn btn-primary px-5">บันทึกข้อมูล</button>
