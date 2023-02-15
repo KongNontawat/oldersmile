@@ -100,8 +100,8 @@ $query_post = mysqli_query($conn, $sql2);
 
                         <?php if($row['user_role'] == 'user'): ?>
                         <div class="mt-2">
-                            <a href="part.php" class="text-success">สมัครเป็นพันธ์มิตรกับเรา?</a> <br>
-                            <a href="mar.php" class="text-warning">สมัครเป็นร้านกับเรา?</a>
+                            <a href="part.php" class="text-success d-block mt-3">สมัครเป็นพันธ์มิตรกับเรา?</a>
+                            <a href="mar.php" class="text-warning d-block mt-2">สมัครเป็นร้านกับเรา?</a>
                         </div>
                         <?php endif; ?>
                         <div class="mt-4">
@@ -110,9 +110,9 @@ $query_post = mysqli_query($conn, $sql2);
 
                     </div>
                 </div>
-
+<?php if(mysqli_num_rows($query_post)>0): ?>
                 <h4 class="my-3">โพสต์ของฉัน</h4>
-
+<?php endif; ?>
                 <?php foreach($query_post as $i => $post): ?>
                 <div class="card mb-3 shadow-sm">
                     <div class="card-header bg-white d-flex align-items-center justify-content-between">
