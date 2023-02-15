@@ -108,9 +108,9 @@ $query = mysqli_query($conn,$sql);
 
                                         </td>
                                         <td>
-                                            <a href="user_edit.php?id=<?php echo $row['user_id'];?>" class="btn btn-warning btn-sm mb-3"><img src="../icon/edit.png" alt=""/> แก้ไข</a>
+                                            <a href="user_edit.php?id=<?php echo $row['user_id'];?>" class="btn btn-warning btn-sm mb-3"><img src="../icon/edit.png" alt=""/></a>
                                             <?php if($row['user_id']!==$my_id):?>
-                                            <a onclick="return confirm('คุณแน่ใจ หรือไม่ ว่าจะลบ')" href="user_proc/user_del_proc.php?id=<?php echo $row['user_id'];?>" class="btn btn-danger btn-sm mb-3"><img src="../icon/trash.png" style="filter:invert(1);" alt=""/>ลบ</a>
+                                            <a onclick="return confirm('คุณแน่ใจ หรือไม่ ว่าจะลบ')" href="user_proc/user_del_proc.php?id=<?php echo $row['user_id'];?>" class="btn btn-danger btn-sm mb-3"><img src="../icon/trash.png" style="filter:invert(1);" alt=""/></a>
                                             <?php endif;?>
                                         </td>
                                     </tr>
