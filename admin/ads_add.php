@@ -81,7 +81,7 @@ $query = mysqli_query($conn,$sql);
                                         <label class="input-group-text" for="image">ภาพโฆษณา</label>
                                         <input type="file" name="ad_image" accept="image/*" id="image" class="form-control" required>
                                     </div>
-                                    <div class="text-center mt-2">
+                                    <div class="mt-2 ms-3">
               <img src="" class="rounded-4" alt="" id="imgpreview" style="width: 200px;max-height:200px;">
             </div>
                                     <div class="mt-3">
