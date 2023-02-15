@@ -72,11 +72,11 @@ $query = mysqli_query($conn,$sql);
                                         <td><p class="text-o-1"><?php echo $row['post_body'];?></p></td>
                                         <td><?php echo $row['post_created'];?></td>
                                         <td>
-                                            <a href="../post_detail.php?id=<?php echo $row['post_id'];?>" class="btn btn-info btn-sm mb-3 px-3">
-                                                ดู
+                                            <a href="../post_detail.php?id=<?php echo $row['post_id'];?>" class="btn btn-info btn-sm mb-3 px-2">
+                                                <img src="../icon/view.png" style="filter:invert(1);" alt="">
                                             </a>
-                                            <a href="pub_edit.php?id=<?php echo $row['post_id'];?>" class="btn btn-warning btn-sm mb-3">แก้ไข</a>
-                                            <a onclick="return confirm('คุณแน่ใจ หรือไม่ ว่าจะลบ')" href="pub_proc/pub_del_proc.php?id=<?php echo $row['post_id'];?>" class="btn btn-danger btn-sm mb-3">ลบ</a>
+                                            <a href="pub_edit.php?id=<?php echo $row['post_id'];?>" class="btn btn-warning btn-sm mb-3"><img src="../icon/edit.png" alt=""/></a>
+                                            <a onclick="return confirm('คุณแน่ใจ หรือไม่ ว่าจะลบ')" href="pub_proc/pub_del_proc.php?id=<?php echo $row['post_id'];?>" class="btn btn-danger btn-sm mb-3"><img src="../icon/trash.png" style="filter:invert(1);" alt=""/></a>
                                         </td>
                                     </tr>
                                     <?php endforeach;?>
