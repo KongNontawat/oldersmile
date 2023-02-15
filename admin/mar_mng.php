@@ -73,7 +73,7 @@ $query = mysqli_query($conn,$sql);
                                         <td><?php echo $row['mar_tel'];?></td>
                                         <td><?php echo $row['mar_address'];?></td>
                                         <td>
-                                            <a href="mar_detail.php?id=<?php echo $row['user_id'];?>" class="btn btn-info btn-sm px-4">ดูรายละเอียด</a>
+                                            <a href="mar_detail.php?id=<?php echo $row['user_id'];?>" class="btn btn-info btn-sm px-4"><img src="../icon/search2.png" alt=""></a>
                                         </td>
                                     </tr>
                                     <?php endforeach;?>

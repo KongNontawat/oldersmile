@@ -47,7 +47,7 @@ $query = mysqli_query($conn,$sql);
                         <div class="d-flex flex-wrap justify-content-between">
                             <h3>จัดการโพสต์</h3>
 
-                            <a href="pub_add.php" class="btn btn-primary px-5">+ โพสต์</a>
+                            <a href="pub_add.php" class="btn btn-primary px-4">+ <img src="../icon/P.png" style="filter: invert(1);" alt=""> โพสต์</a>
                         </div>
 
                         <!-- Table!!! -->

@@ -79,9 +79,9 @@ $row = mysqli_fetch_assoc($query);
                                 
 
                                 <div class="mt-5">
-                                    <a href="#" onclick="window.history.back()" class="btn btn-secondary">กลับ</a>
-                                    <a href="mar_proc/mar_cancel_proc.php?id=<?php echo $row['user_id'];?>" class="btn btn-danger">ไม่อนุมัติ</a>
-                                    <a href="mar_proc/mar_allow_proc.php?id=<?php echo $row['user_id'];?>" class="btn btn-success px-5">อนุมัติ</a>
+                                    <a onclick="window.history.back()" href="#" class="btn btn-secondary"><img src="../icon/back.png" alt=""></a>
+                                    <a href="mar_proc/mar_cancel_proc.php?id=<?php echo $row['user_id'];?>" class="btn btn-danger"><img src="../icon/cancel.png" style="width: 13px!important; height:13px!important;" alt=""> ไม่อนุมัติ</a>
+                                    <a href="mar_proc/mar_allow_proc.php?id=<?php echo $row['user_id'];?>" class="btn btn-success px-5"><img src="../icon/check.png" alt=""> อนุมัติ</a>
                                 </div>
                             </div>
                         </div>

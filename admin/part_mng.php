@@ -71,7 +71,7 @@ $query = mysqli_query($conn,$sql);
                                         <td><?php echo $row['part_email'];?></td>
                                         <td><?php echo $row['part_address'];?></td>
                                         <td>
-                                            <a href="part_detail.php?id=<?php echo $row['user_id'];?>" class="btn btn-info btn-sm">ดูรายละเอียด</a>
+                                            <a href="part_detail.php?id=<?php echo $row['user_id'];?>" class="btn btn-info btn-sm px-4"><img src="../icon/search2.png" alt=""></a>
                                         </td>
                                     </tr>
                                     <?php endforeach;?>

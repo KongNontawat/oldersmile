@@ -47,7 +47,7 @@ $query = mysqli_query($conn,$sql);
                         <div class="d-flex flex-wrap justify-content-between">
                             <h3>จัดการโฆษณา</h3>
 
-                            <a href="ads_add.php" class="btn btn-primary px-4">+ เพิ่มโฆษณา</a>
+                            <a href="ads_add.php" class="btn btn-primary px-4">+ <img src="../icon/AdAd.png" class="mx-1" style="filter:invert(1);" alt=""> เพิ่มโฆษณา</a>
                         </div>
 
                         <!-- Table!!! -->

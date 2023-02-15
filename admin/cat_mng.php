@@ -52,7 +52,7 @@ $query = mysqli_query($conn,$sql);
                             <div class="me-3">
                                 <input style="width: 350px;" type="text" name="cat_name" id="" class="form-control" required placeholder="เพิ่มหมวดหมู่" autofocus>
                             </div>
-                            <button type="submit" class="btn btn-primary flex-wrap">+ เพิ่มหมวดหมู่</button>
+                            <button type="submit" class="btn btn-primary flex-wrap">+ <img src="../icon/M.png" style="filter:invert(1);" alt=""> เพิ่มหมวดหมู่</button>
                         </form>
 
                         <!-- Table!!! -->
