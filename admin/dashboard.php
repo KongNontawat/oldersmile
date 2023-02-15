@@ -2,7 +2,7 @@
 include('../conn.php');
 include('auth_proc/check_login.php');
 
-$sql = "SELECT *,COUNT(pl.post_like) as count FROM post AS p LEFT JOIN post_like as pl ON p.post_id = pl.post_id GROUP BY p.post_id ORDER BY count DESC";
+$sql = "SELECT *,SUM(pl.post_like) as count FROM post AS p LEFT JOIN post_like as pl ON p.post_id = pl.post_id GROUP BY p.post_id ORDER BY count DESC";
 $query = mysqli_query($conn,$sql);
 $sql2 = "SELECT * FROM advert AS a LEFT JOIN category as c ON c.cat_id = a.cat_id LEFT JOIN user as u ON u.user_id = a.user_id ORDER BY ad_point DESC";
 $query2 = mysqli_query($conn,$sql2);

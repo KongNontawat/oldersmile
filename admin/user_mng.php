@@ -76,9 +76,9 @@ $query = mysqli_query($conn,$sql);
                                     <tr>
                                         <th style="width: 5%;">#</th>
                                         <th style="width: 5%;"></th>
-                                        <th style="width: 15%;">ชื่อผู้ใช้</th>
-                                        <th style="width: 15%;">เบอร์โทร</th>
-                                        <th style="width: 10%;">เพศ</th>
+                                        <th style="width: 20%;">ชื่อผู้ใช้</th>
+                                        <th style="width: 12%;">เบอร์โทร</th>
+                                        <th style="width: 8%;">เพศ</th>
                                         <th style="width: 15%;">วันเกิด</th>
                                         <th style="width: 10%;">สถานะ</th>
                                         <th style="width: 20%;"></th>

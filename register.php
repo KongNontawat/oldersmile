@@ -69,8 +69,10 @@ include('conn.php');
                                         <label class="input-group-text" for="image">รูปโปรไฟล์</label>
                                         <input type="file" name="user_image" id="image" accept="image/*" class="form-control">
                                     </div>
-
-                                    <h4 class="mb-3 mt-4">ความสนใจของคุณ</h4>
+            <div class="text-center mt-2">
+              <img src="" class="rounded-4" alt="" id="imgpreview" style="width: 200px;max-height:200px;">
+            </div>
+                                    <h4 class="my-3">ความสนใจของคุณ</h4>
                                     <?php 
                                     $query_my_cat_2 = mysqli_query($conn, "SELECT * FROM category WHERE NOT cat_id = 1");
                                     foreach($query_my_cat_2 as $my_cat2):
@@ -83,7 +85,7 @@ include('conn.php');
 
                     <div class="mt-4 text-center">
                         <button type="submit" class="btn btn-primary col-12 btn-lg mb-3">สมัครสมาชิก</button>
-                        <a href="login.php" class="text-link">เข้าสู่ระบบ?</a>
+                        <a href="login.php" class="text-link text-primary">เข้าสู่ระบบ?</a>
                     </div>
                 </form>
             </div>

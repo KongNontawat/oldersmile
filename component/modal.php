@@ -18,10 +18,10 @@
                         <label for="image" class="input-group-text">รูป/วีดีโอ</label>
                         <input type="file" name="post_media" accept="image/*,video/mp4,video/*" id="image" class="form-control"> 
                     </div>
-                    <div class="text-center">
-              <img src="" alt="" id="imgpreview" style="width: 200px;max-height:200px;">
+                    <div class="text-center mt-2">
+              <img src="" alt="" class="rounded-4"  id="imgpreview" style="width: 250px;max-height:250px;">
             </div>
-                    <button type="submit" class="btn btn-primary col-12 btn-lg mt-3">โพสต์</button>
+                    <button type="submit" class="btn btn-primary col-12 btn-lg mt-2">โพสต์</button>
                 </form>
             </div>
         </div>

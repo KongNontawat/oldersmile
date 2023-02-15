@@ -90,10 +90,12 @@ $row = mysqli_fetch_assoc($query);
 
 
                             <div class="input-group mb-3">
-                                <label class="input-group-text" for="image">รูปโปรไฟล์</label>
-                                <input type="file" name="user_image" id="image" class="form-control">
+                                <label class="input-group-text" for="image2">รูปโปรไฟล์</label>
+                                <input type="file" name="user_image" id="image2" class="form-control">
                                 <input type="hidden" name="old_image" value="<?php echo $row['user_image'];?>">
-                            </div>
+                            </div>                    <div class="text-center mt-2">
+              <img src="img/<?php echo $row['user_image'];?>" class="rounded-4" alt="" id="imgpreview2" style="width: 200px;max-height:200px;">
+            </div>
 
                             <h4 class="my-3">ความสนใจของคุณ</h4>
                                 <?php 

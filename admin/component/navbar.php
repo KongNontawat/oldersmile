@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-<nav class="navbar navbar-light bg-white shadow-sm py-2">
+<nav class="navbar navbar-light border-bottom bg-white shadow-sm py-2">
     <div class="container-fluid">
         <img src="../icon/menu.png" alt="" height="40" class="btn-toggle d-lg-none">
 

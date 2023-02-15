@@ -16,5 +16,16 @@ $(function () {
             }
             reader.readAsDataURL(file);
         }
+    })    
+    $('#image2').change(function () {
+        const file = this.files[0];
+        console.log(file);
+        if (file) {
+            let reader = new FileReader();
+            reader.onload = function (event) {
+                $('#imgpreview2').attr('src', event.target.result);
+            }
+            reader.readAsDataURL(file);
+        }
     })
 })

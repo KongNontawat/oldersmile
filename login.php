@@ -39,7 +39,7 @@ include('conn.php');
 
                     <div class="mt-4 text-center">
                         <button type="submit" class="btn btn-primary col-12 btn-lg mb-3">เข้าสู่ระบบ</button>
-                        <a href="register.php" class="text-link">สมัครสมาชิก?</a>
+                        <a href="register.php" class="text-link text-primary">สมัครสมาชิก?</a>
                     </div>
                 </form>
             </div>
