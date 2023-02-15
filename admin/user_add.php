@@ -107,8 +107,8 @@ include('auth_proc/check_login.php');
                                     </div>
 
                                     <div class="mt-5">
-                                        <a onclick="window.history.back()" href="#" class="btn btn-secondary">กลับ</a>
-                                        <button type="reset" class="btn btn-info">ล้างข้อมูล</button>
+                                        <a onclick="window.history.back()" href="#" class="btn btn-secondary"><img src="../icon/back.png" alt=""></a>
+                                        <button type="reset" class="btn btn-info"><img src="../icon/reset.png" alt=""></button>
                                         <button type="submit" class="btn btn-primary px-5">บันทึกข้อมูล</button>
                                     </div>
 
