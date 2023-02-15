@@ -27,7 +27,7 @@ if(mysqli_num_rows($query_ad2) > 0):
 
 <div class="card shadow-sm position-sticky" style="top:70px">
     <div class="card-header bg-white">
-        <h5>เรื่องที่สนใจ</h5>
+        <h5>เรื่องที่น่าสนใจ</h5>
     </div>
     <div class="card-body cat_bar">
         <?php foreach($query_all_cat as $cat1): ?>

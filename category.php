@@ -93,7 +93,7 @@ $query_cat5 = mysqli_query($conn, $sql);
     <script>
         $(function() {
             $('.active-menu a.category').addClass('active');
-            $('.active-header').text('เรื่องที่สนใจ');
+            $('.active-header').text('เรื่องที่น่าสนใจ');
 
             $('a.like').click(function() {
                 let like = parseInt($(this).text())

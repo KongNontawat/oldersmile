@@ -68,6 +68,7 @@ $query_post = mysqli_query($conn, $sql);
     <title>OlderSmile</title>
 </head>
 <body>
+    <img src="icon/icon.png" class="d-none" alt="">
     <!-- Alert -->
     <?php include('component/alert.php'); ?>
     <!-- Modal -->

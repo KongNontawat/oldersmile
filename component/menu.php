@@ -6,7 +6,7 @@
     <a href="chat_list.php" class="rounded-4 px-1 py-2 mb-1 d-flex align-items-center chat_list"><img src="icon/chat.png" class="me-2" alt="" width="30" height="30"><p>แชท</p></a>
     <a href="search.php" class="rounded-4 px-1 py-2 mb-1 d-flex align-items-center search"><img src="icon/search.png" class="me-2" alt="" width="30" height="30"><p>ค้นหา</p></a>
     <a href="follow.php" class="rounded-4 px-1 py-2 mb-1 d-flex align-items-center follow"><img src="icon/follow.png" class="me-2" alt="" width="30" height="30"><p>ติดตาม</p></a>
-    <a href="category.php" class="rounded-4 px-1 py-2 mb-1 d-flex align-items-center category"><img src="icon/pin.png" class="me-2" alt="" width="30" height="30"><p>เรื่องที่สนใจ</p></a>
+    <a href="category.php" class="rounded-4 px-1 py-2 mb-1 d-flex align-items-center category"><img src="icon/pin.png" class="me-2" alt="" width="30" height="30"><p>เรื่องที่น่าสนใจ</p></a>
     <a href="activity.php" class="rounded-4 px-1 py-2 mb-1 d-flex align-items-center activity"><img src="icon/megaphone.png" class="me-2" alt="" width="30" height="30"><p>ประชาสัมพันธ์</p></a>
 
     <?php if(isset($_SESSION['login']) AND $_SESSION['my_role'] == 'market'): ?>
